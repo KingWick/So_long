@@ -1,46 +1,31 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   parse_check.c                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: akram <akram@student.42.fr>                +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/02/03 19:24:43 by akram             #+#    #+#             */
+/*   Updated: 2023/02/05 23:22:09 by akram            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../includes/game.h"
 
-int count_line(char **str)
-{
-	int i;
-	i = 0;
-
-	while (str[i])
-		i++;
-	return (i);
-}
-
-int	valid_files(const char *s1, const char *s2)
+void	check_line_map(char **str)
 {
 	int	i;
-	int	start;
 
 	i = 0;
-	start = ft_strlen(s1) - ft_strlen(s2);
-	while (s1[start + i])
+	while (str[i])
 	{
-		if (s1[start + i] != s2[i])
-			return (1);
+		if (ft_strlen(str[i]) != ft_strlen(str[0]))
+		{
+			ft_error("Error\nThe size of the map is not correct");
+		}
+		printf("i = [%d]\n",i);
 		i++;
 	}
-	return (0);
-}
-
-int check_arg(int ac, char **av)
-{
-	int fd;
-	if (ac != 2)
-		ft_error("invalid number of arguments\n");
-	if (valid_files(av[1], ".ber") == 1) //av{0} etant lexec av[1] etant le .ber ou autre lresulat dvalid file sfera tjr par la soustraction de -4 (.ber)
-		ft_error("fake file extension\n");
-	fd = open(av[1], O_DIRECTORY);
-	if (fd > 0)
-	{
-		ft_error("Invalid files\n");
-		close(fd);
-	}
-	close(fd);
-	return (0);
 }
 
 void	check_wall(char **str)
@@ -59,36 +44,38 @@ void	check_wall(char **str)
 		x = 0;
 		while (str[i][x])
 		{
-			if (str[0][x] != '1')
-				ft_error("Error\nMap not closed on the top");
 			if (str[count - 1][x] != '1')
 				ft_error("Error\nMap not closed on the bottom");
 			if (str[i][0] != '1' || str[i][ nb_char - 1] != '1')
 				ft_error("Error\nMap not surrounded by wall");
-			if (str[i][x] != '1' && str[i][x] != '0'&& str[i][x] != 'P' && str[i][x] != 'E'&& str[i][x] != 'C')
-				ft_error("charba\n");
 			x++;
 		}
 		i++;
 	}
 }
 
-
-void	check_line_map(char **str)
+void	check_map(char **str)
 {
-	int	i;
-
+	int x;
+	int i;
+	
+	x = 0;
 	i = 0;
 	while (str[i])
 	{
-		if (ft_strlen(str[i]) != ft_strlen(str[0]))
+		x = 0;
+		while (str[i][x])
 		{
-			ft_error("Error\n the size of the map is not correct");
+			if (str[0][x] != '1')
+				ft_error("Error\nMap not closed on the top");
+			if (str[i][x] != '1' && str[i][x] != '0'&& str[i][x] != 'P' && str[i][x] != 'E'&& str[i][x] != 'C')
+				ft_error("Error\nUnknown character");
+			x++;
 		}
 		i++;
 	}
+	check_wall(str);
 }
-
 
 t_game ultimate_parsing(int fd)
 {
@@ -107,8 +94,6 @@ t_game ultimate_parsing(int fd)
 	game.map = ft_split(map, '\n');
 	free(map);
 	check_line_map(game.map);
-	check_wall(game.map);
-	//game.line = count_line(game.map);
-	//printf("%d", count_line(game.map));
+	check_map(game.map);
 	return (game);
 }

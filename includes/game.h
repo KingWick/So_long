@@ -1,9 +1,9 @@
 #ifndef GAME_H
 # define GAME_H
 
-#include "../mlx/mlx.h"
-#include <X11/X.h>
-#include <X11/keysym.h>
+// #include "../mlx/mlx.h"
+// #include <X11/X.h>
+// #include <X11/keysym.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
@@ -38,7 +38,6 @@ typedef struct s_game
 t_game 	ultimate_parsing(int fd);
 void	check_line_map(char **str);
 void	check_wall(char **str);
-int 	ft_count_word(char *map, char c);
 int 	check_arg(int ac, char **av);
 void	init_game(t_game *game);
 int 	valid_files(const char *s1, const char *s2);
