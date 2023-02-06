@@ -3,20 +3,20 @@
 /*                                                        :::      ::::::::   */
 /*   parse_check2.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: akram <akram@student.42.fr>                +#+  +:+       +#+        */
+/*   By: akdjebal <akdjebal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/05 22:54:41 by akram             #+#    #+#             */
-/*   Updated: 2023/02/05 22:57:07 by akram            ###   ########.fr       */
+/*   Updated: 2023/02/06 15:12:09 by akdjebal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/game.h"
 
-int count_line(char **str)
+int	count_line(char **str)
 {
-	int i;
-	i = 0;
+	int	i;
 
+	i = 0;
 	while (str[i])
 		i++;
 	return (i);
@@ -38,12 +38,13 @@ int	valid_files(const char *s1, const char *s2)
 	return (0);
 }
 
-int check_arg(int ac, char **av)
+int	check_arg(int ac, char **av)
 {
-	int fd;
+	int	fd;
+
 	if (ac != 2)
 		ft_error("invalid number of arguments\n");
-	if (valid_files(av[1], ".ber") == 1) //av{0} etant lexec av[1] etant le .ber ou autre lresulat dvalid file sfera tjr par la soustraction de -4 (.ber)
+	if (valid_files(av[1], ".ber") == 1)
 		ft_error("fake file extension\n");
 	fd = open(av[1], O_DIRECTORY);
 	if (fd > 0)

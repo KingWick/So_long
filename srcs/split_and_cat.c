@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   split_and_cat.c                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: akdjebal <akdjebal@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/02/03 19:24:43 by akram             #+#    #+#             */
+/*   Updated: 2023/02/06 15:17:01 by akdjebal         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../includes/game.h"
 
 char	*ft_strcat(char *dest, char *src)
@@ -28,7 +40,6 @@ char	*ft_strcat(char *dest, char *src)
 	tmp[i] = '\0';
 	return (tmp);
 }
-
 
 static char	*ft_strnndup(char *s1, int c)
 {
