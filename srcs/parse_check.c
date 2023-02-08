@@ -6,12 +6,11 @@
 /*   By: akdjebal <akdjebal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/03 19:24:43 by akram             #+#    #+#             */
-/*   Updated: 2023/02/06 16:50:26 by akdjebal         ###   ########.fr       */
+/*   Updated: 2023/02/08 13:57:55 by akdjebal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/game.h"
-#include <string.h>
 
 void	check_line_map(char **str)
 {
@@ -78,15 +77,17 @@ void	check_map(char **str)
 	check_wall(str);
 }
 
-void	check_element(char **str)
+t_game	check_element(char **str)
 {
-	t_game	game;
+	t_game game;
 	int		i;
 	int		x;
 
 	x = 0;
 	i = 0;
-	//init_game(game);
+	game.collectible = 0;
+	game.exit = 0;
+	game.player = 0;
 	while (str[i])
 	{
 		x = 0;
@@ -97,15 +98,14 @@ void	check_element(char **str)
 			else if (str[i][x] == 'E')
 				game.exit++;
 			else if (str[i][x] == 'C')
-				game.collectible = 2;
+				game.collectible++;
 			x++;
 		}
 		i++;
 	}
-	printf("\ncollectible vaut == [%d]\n", game.collectible);
-	// if (game.player || game.exit > 2)
-	// 	ft_error("errrrrrror\n");
-	printf("player vaut == [%d]\nExit vaut == [%d]", game.player, game.exit);
+	if (game.exit != 1 || game.player != 1 || game.collectible == 0)
+		ft_error("Error\nMissing elements or extra elements");
+	return (game);
 }
 
 t_game	ultimate_parsing(int fd)
@@ -126,6 +126,6 @@ t_game	ultimate_parsing(int fd)
 	free(map);
 	check_line_map(game.map);
 	check_map(game.map);
-	check_element(game.map);
+	game = check_element(game.map);
 	return (game);
 }
