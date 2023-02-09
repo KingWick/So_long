@@ -6,7 +6,7 @@
 /*   By: akdjebal <akdjebal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/03 19:24:43 by akram             #+#    #+#             */
-/*   Updated: 2023/02/09 14:04:28 by akdjebal         ###   ########.fr       */
+/*   Updated: 2023/02/09 16:13:16 by akdjebal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,9 @@
 typedef struct s_game
 {
 	char	**map;
+	char **path;
+	int height;
+	int width;
 	void	*mlx;
 	void	*win;
 	void	*img;
@@ -55,17 +58,23 @@ int		count_line(char **str);
 
 
 //----------------graphic_Part----------------//
-
 t_game	window(t_game game);
 t_game 	texture(t_game game);
 
 
 
 //------------check_path--------//
+void	ft_pos_exit(t_game *map, int *x, int *y);
+void	ft_items(t_game *map);
+void	ft_error_path_collect(t_game *map);
+int		ft_path(t_game *map, int i, int j);
+int		ft_check_items(t_game *map);
+
 
 //--------------Error--------------//
 int		ft_error_free(t_game *game);
 int		ft_error(char *str);
+void	ft_error_path(t_game *map);
 
 //------------Get_split_cat---------//
 char	**ft_split(char *str, char c);

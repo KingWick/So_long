@@ -6,7 +6,7 @@
 /*   By: akdjebal <akdjebal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/03 19:24:59 by akram             #+#    #+#             */
-/*   Updated: 2023/02/09 14:48:40 by akdjebal         ###   ########.fr       */
+/*   Updated: 2023/02/09 15:27:43 by akdjebal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,13 @@
 
 t_game	init_game(t_game game)
 {
-	game.map = NULL;
 	game.win = NULL;
 	game.img = NULL;
 	game.wall = NULL;
 	game.floor = NULL;
 	game.player = 0;
+	game.height = 0;
+	game.width = 0;
 	game.exit = 0;
 	game.collectible = 0;
 	game.line = 0;

@@ -6,7 +6,7 @@
 /*   By: akdjebal <akdjebal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/03 19:24:43 by akram             #+#    #+#             */
-/*   Updated: 2023/02/09 12:07:27 by akdjebal         ###   ########.fr       */
+/*   Updated: 2023/02/09 15:28:00 by akdjebal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -119,10 +119,11 @@ t_game	ultimate_parsing(int fd)
 	}
 	map = ft_strcat(map, line);
 	free(line);
-	game.map = ft_split(map, '\n');
+	game.map = ft_split(map, '|');
 	free(map);
 	check_line_map(game.map);
 	check_map(game.map);
 	game = check_element(game.map, game);
+	printf("game === %s\n", game.map[0]);
 	return (game);
 }
