@@ -6,7 +6,7 @@
 /*   By: akdjebal <akdjebal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/03 19:24:43 by akram             #+#    #+#             */
-/*   Updated: 2023/02/09 17:10:48 by akdjebal         ###   ########.fr       */
+/*   Updated: 2023/02/09 17:18:52 by akdjebal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@
 # define MLX_ERROR 1
 # define WIN_WIDTH 1980
 # define WIN_HEIGHT 1080
+# define BUFFER_SIZE 1
 
 typedef struct s_game
 {
