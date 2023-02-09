@@ -6,7 +6,7 @@
 /*   By: akdjebal <akdjebal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/03 19:24:43 by akram             #+#    #+#             */
-/*   Updated: 2023/02/08 13:57:31 by akdjebal         ###   ########.fr       */
+/*   Updated: 2023/02/09 14:04:28 by akdjebal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ typedef struct s_game
 	void	*win;
 	void	*img;
 	void	*wall;
-	void	*space;
+	void	*floor;
 	int		player;
 	int		exit;
 	int		collectible;
@@ -45,18 +45,23 @@ typedef struct s_game
 
 //------------init_game--and_check--------//
 t_game	ultimate_parsing(int fd);
-t_game	check_element(char **str);
-void	init_game(t_game game);
+t_game	check_element(char **str, t_game game);
+t_game	init_game(t_game game);
 void	check_line_map(char **str);
 void	check_wall(char **str);
 int		check_arg(int ac, char **av);
 int		valid_files(const char *s1, const char *s2);
 int		count_line(char **str);
 
+
+//----------------graphic_Part----------------//
+
+t_game	window(t_game game);
+t_game 	texture(t_game game);
+
+
+
 //------------check_path--------//
-int        ft_search(char **str, int x, int y, int nbrObject, int exitFound);
-int        validNum(char c);
-int 	   ft_possible(char **str, int x, int y, int nbrObject); 
 
 //--------------Error--------------//
 int		ft_error_free(t_game *game);

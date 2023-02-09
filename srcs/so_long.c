@@ -6,7 +6,7 @@
 /*   By: akdjebal <akdjebal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/05 23:01:13 by akram             #+#    #+#             */
-/*   Updated: 2023/02/08 12:42:38 by akdjebal         ###   ########.fr       */
+/*   Updated: 2023/02/09 14:48:44 by akdjebal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,6 @@ int	main(int ac, char **av)
 	fd = open(av[1], O_RDONLY);
 	check_arg(ac, av);
 	game = ultimate_parsing(fd);
-	printf("collectible vaut == [%d]\n", game.collectible);
-	printf("exit vaut == [%d]\n", game.exit);
-	printf("player vaut == [%d]\n", game.player);
-	printf("line vaut == [%d]\n", game.line);
+	//game = window(game);
 	//printf("collectible vaut == [%d]\n", game.collectible);
 }

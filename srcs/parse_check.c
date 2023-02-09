@@ -6,7 +6,7 @@
 /*   By: akdjebal <akdjebal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/03 19:24:43 by akram             #+#    #+#             */
-/*   Updated: 2023/02/08 13:57:55 by akdjebal         ###   ########.fr       */
+/*   Updated: 2023/02/09 12:07:27 by akdjebal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ void	check_wall(char **str)
 		{
 			if (str[count - 1][x] != '1')
 				ft_error("Error\nMap not closed on the bottom");
-			if (str[i][0] != '1' || str[i][ nb_char - 1] != '1')
+			if (str[i][0] != '1' || str[i][nb_char - 1] != '1')
 				ft_error("Error\nMap not surrounded by wall");
 			x++;
 		}
@@ -77,17 +77,14 @@ void	check_map(char **str)
 	check_wall(str);
 }
 
-t_game	check_element(char **str)
+t_game	check_element(char **str, t_game game)
 {
-	t_game game;
 	int		i;
 	int		x;
 
 	x = 0;
 	i = 0;
-	game.collectible = 0;
-	game.exit = 0;
-	game.player = 0;
+	game = init_game(game);
 	while (str[i])
 	{
 		x = 0;
@@ -126,6 +123,6 @@ t_game	ultimate_parsing(int fd)
 	free(map);
 	check_line_map(game.map);
 	check_map(game.map);
-	game = check_element(game.map);
+	game = check_element(game.map, game);
 	return (game);
 }
