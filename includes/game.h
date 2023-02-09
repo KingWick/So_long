@@ -6,7 +6,7 @@
 /*   By: akdjebal <akdjebal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/03 19:24:43 by akram             #+#    #+#             */
-/*   Updated: 2023/02/09 16:13:16 by akdjebal         ###   ########.fr       */
+/*   Updated: 2023/02/09 17:10:48 by akdjebal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,14 +27,13 @@
 # define MLX_ERROR 1
 # define WIN_WIDTH 1980
 # define WIN_HEIGHT 1080
-# define BUFFER_SIZE 1
 
 typedef struct s_game
 {
 	char	**map;
-	char **path;
-	int height;
-	int width;
+	char	**path;
+	int		height;
+	int		width;
 	void	*mlx;
 	void	*win;
 	void	*img;
@@ -56,20 +55,17 @@ int		check_arg(int ac, char **av);
 int		valid_files(const char *s1, const char *s2);
 int		count_line(char **str);
 
-
 //----------------graphic_Part----------------//
 t_game	window(t_game game);
-t_game 	texture(t_game game);
-
-
+t_game	texture(t_game game);
 
 //------------check_path--------//
 void	ft_pos_exit(t_game *map, int *x, int *y);
+void	ft_check_collect(t_game *map);
 void	ft_items(t_game *map);
 void	ft_error_path_collect(t_game *map);
 int		ft_path(t_game *map, int i, int j);
 int		ft_check_items(t_game *map);
-
 
 //--------------Error--------------//
 int		ft_error_free(t_game *game);

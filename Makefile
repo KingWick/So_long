@@ -3,6 +3,7 @@ SRCS		= 	srcs/so_long.c \
 				srcs/parse_check.c \
 				srcs/parse_check2.c \
 				srcs/check_path.c \
+				srcs/check_path2.c \
 				srcs/init_game.c \
 				srcs/split_and_cat.c \
 			  	srcs/get_next_line.c \
