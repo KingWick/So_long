@@ -6,7 +6,7 @@
 /*   By: akdjebal <akdjebal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/03 19:24:43 by akram             #+#    #+#             */
-/*   Updated: 2023/02/09 17:18:52 by akdjebal         ###   ########.fr       */
+/*   Updated: 2023/02/10 13:28:33 by akdjebal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,9 @@ t_game	window(t_game game);
 t_game	texture(t_game game);
 
 //------------check_path--------//
-void	ft_pos_exit(t_game *map, int *x, int *y);
+void	ft_backtacking(t_game *game, int i, int j);
+void	ft_pos_player(t_game *game, int *x, int *y);
+void	ft_pos_exit(t_game *game, int *x, int *y);
 void	ft_check_collect(t_game *map);
 void	ft_items(t_game *map);
 void	ft_error_path_collect(t_game *map);

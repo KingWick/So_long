@@ -6,23 +6,23 @@
 /*   By: akdjebal <akdjebal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/03 19:24:43 by akram             #+#    #+#             */
-/*   Updated: 2023/02/09 16:56:33 by akdjebal         ###   ########.fr       */
+/*   Updated: 2023/02/10 13:29:39 by akdjebal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/game.h"
 
-void	ft_pos_player(t_game *map, int *x, int *y)
+void	ft_pos_player(t_game *game, int *x, int *y)
 {
 	int		i;
 	int		j;
 	char	*line;
 
 	i = 0;
-	while (i < map->height)
+	while (i < game->height)
 	{
 		j = 0;
-		line = map->map[i];
+		line = game->map[i];
 		while (line[j + 1])
 		{
 			if (line[j] == 'P')
@@ -36,17 +36,17 @@ void	ft_pos_player(t_game *map, int *x, int *y)
 	}
 }
 
-void	ft_pos_exit(t_game *map, int *x, int *y)
+void	ft_pos_exit(t_game *game, int *x, int *y)
 {
 	int		i;
 	int		j;
 	char	*line;
 
 	i = 0;
-	while (i < map->height)
+	while (i < game->height)
 	{
 		j = 0;
-		line = map->map[i];
+		line = game->map[i];
 		while (line[j + 1])
 		{
 			if (line[j] == 'E')
@@ -60,43 +60,43 @@ void	ft_pos_exit(t_game *map, int *x, int *y)
 	}
 }
 
-void	ft_backtacking(t_game *map, int i, int j)
+void	ft_backtacking(t_game *game, int i, int j)
 {
-	if (map->map[i][j + 1] != '1' && map->map[i][j + 1] != 'E'
-		&& map->path[i][j + 1] != '1')
+	if (game->map[i][j + 1] != '1' && game->map[i][j + 1] != 'E'
+		&& game->path[i][j + 1] != '1')
 	{
-		map->path[i][j + 1] = '1';
-		ft_backtacking(map, i, j + 1);
+		game->path[i][j + 1] = '1';
+		ft_backtacking(game, i, j + 1);
 	}
-	if (map->map[i][j - 1] != '1' && map->map[i][j - 1] != 'E'
-		&& map->path[i][j - 1] != '1')
+	if (game->map[i][j - 1] != '1' && game->map[i][j - 1] != 'E'
+		&& game->path[i][j - 1] != '1')
 	{
-		map->path[i][j - 1] = '1';
-		ft_backtacking(map, i, j - 1);
+		game->path[i][j - 1] = '1';
+		ft_backtacking(game, i, j - 1);
 	}
-	if (map->map[i + 1][j] != '1' && map->map[i + 1][j] != 'E'
-		&& map->path[i + 1][j] != '1')
+	if (game->map[i + 1][j] != '1' && game->map[i + 1][j] != 'E'
+		&& game->path[i + 1][j] != '1')
 	{
-		map->path[i + 1][j] = '1';
-		ft_backtacking(map, i + 1, j);
+		game->path[i + 1][j] = '1';
+		ft_backtacking(game, i + 1, j);
 	}
-	if (map->map[i - 1][j] != '1' && map->map[i - 1][j] != 'E'
-		&& map->path[i - 1][j] != '1')
+	if (game->map[i - 1][j] != '1' && game->map[i - 1][j] != 'E'
+		&& game->path[i - 1][j] != '1')
 	{
-		map->path[i - 1][j] = '1';
-		ft_backtacking(map, i - 1, j);
+		game->path[i - 1][j] = '1';
+		ft_backtacking(game, i - 1, j);
 	}
 }
 
-int	ft_path(t_game *map, int i, int j)
+int	ft_path(t_game *game, int i, int j)
 {
-	ft_pos_player(map, &i, &j);
-	ft_check_collect(map);
-	ft_backtacking(map, i, j);
-	ft_pos_exit(map, &i, &j);
-	map->path[i][j] = 'E';
-	if (map->path[i + 1][j] == '1' || map->path[i - 1][j] == '1'
-		|| map->path[i][j + 1] == '1' || map->path[i][j - 1] == '1')
+	ft_pos_player(game, &i, &j);
+	ft_check_collect(game);
+	ft_backtacking(game, i, j);
+	ft_pos_exit(game, &i, &j);
+	game->path[i][j] = 'E';
+	if (game->path[i + 1][j] == '1' || game->path[i - 1][j] == '1'
+		|| game->path[i][j + 1] == '1' || game->path[i][j - 1] == '1')
 		return (1);
 	return (0);
 }

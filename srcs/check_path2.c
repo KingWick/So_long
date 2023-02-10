@@ -6,7 +6,7 @@
 /*   By: akdjebal <akdjebal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/03 19:24:43 by akram             #+#    #+#             */
-/*   Updated: 2023/02/09 17:08:03 by akdjebal         ###   ########.fr       */
+/*   Updated: 2023/02/10 13:39:45 by akdjebal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,20 +25,20 @@ void	ft_null_map(char *path, t_game *map)
 	path[i] = '\0';
 }
 
-void	ft_check_collect(t_game *map)
+void	ft_check_collect(t_game *game)
 {
 	int	i;
 
 	i = 0;
-	map -> path = (char **) malloc(sizeof(char *) * (map -> height + 1));
-	map -> path[map->height] = NULL;
-	while (i < map->height)
+	game->path = (char **) malloc(sizeof(char *) * (game->height + 1));
+	game->path[game->height] = NULL;
+	while (i < game->height)
 	{
-		map->path[i] = (char *) malloc(sizeof(char) * (map->width + 1));
-		ft_null_map(map->path[i], map);
+		game->path[i] = (char *) malloc(sizeof(char) * (game->width + 1));
+		ft_null_map(game->path[i], game);
 		i++;
 	}
-	map->path[i] = NULL;
+	game->path[i] = NULL;
 }
 
 void	ft_items(t_game *map)
