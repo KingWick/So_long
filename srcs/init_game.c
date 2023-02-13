@@ -6,25 +6,24 @@
 /*   By: akdjebal <akdjebal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/03 19:24:59 by akram             #+#    #+#             */
-/*   Updated: 2023/02/09 17:08:43 by akdjebal         ###   ########.fr       */
+/*   Updated: 2023/02/13 17:11:48 by akdjebal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/game.h"
 
-t_game	init_game(t_game game)
+void	init_game(t_game *game)
 {
-	game.win = NULL;
-	game.img = NULL;
-	game.wall = NULL;
-	game.floor = NULL;
-	game.player = 0;
-	game.height = 0;
-	game.width = 0;
-	game.exit = 0;
-	game.collectible = 0;
-	game.line = 0;
-	return (game);
+	game->win = NULL;
+	game->img = NULL;
+	game->wall = NULL;
+	game->floor = NULL;
+	game->player = 0;
+	game->height = 0;
+	game->width = 0;
+	game->exit = 0;
+	game->collectible = 0;
+	game->line = 0;
 }
 
 // t_game window(t_game game)

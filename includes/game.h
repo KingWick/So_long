@@ -6,16 +6,16 @@
 /*   By: akdjebal <akdjebal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/03 19:24:43 by akram             #+#    #+#             */
-/*   Updated: 2023/02/13 14:56:34 by akdjebal         ###   ########.fr       */
+/*   Updated: 2023/02/13 17:26:56 by akdjebal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef GAME_H
 # define GAME_H
 
-# include "../mlx/mlx.h"
-# include <X11/X.h>
-# include <X11/keysym.h>
+// # include "../mlx/mlx.h"
+// # include <X11/X.h>
+// # include <X11/keysym.h>
 # include <stdio.h>
 # include <stdlib.h>
 # include <unistd.h>
@@ -48,8 +48,8 @@ typedef struct s_game
 
 //------------init_game--and_check--------//
 t_game	ultimate_parsing(int fd);
-t_game	check_element(char **str, t_game game);
-t_game	init_game(t_game game);
+void	check_element(char **str, t_game *game);
+void	init_game(t_game *game);
 void	check_line_map(char **str);
 void	check_wall(char **str);
 int		check_arg(int ac, char **av);
@@ -78,13 +78,13 @@ void	ft_error_path(t_game *game);
 
 //------------Utils_libft---------//
 char	**ft_split(char *str, char c);
- char	*ft_strcat(char *dest, char *src);
-// char	*ft_strjoin_free(char *s1, char *s2);
- char	*ft_substr(char const *s, unsigned int start, size_t len);
+char	*ft_strcat(char *dest, char *src);
+//char	*ft_strjoin_free(char *s1, char *s2);
+char	*ft_substr(char const *s, unsigned int start, size_t len);
 char	*ft_strchr(const char *s, int c);
- char	*ft_strdup(const char *s);
- int		get_next_line(int fd, char **line);
- int		ft_strlen(const char *s);
+char	*ft_strdup(const char *s);
+int		get_next_line(int fd, char **line);
+int		ft_strlen(const char *s);
 // int		boucle(char **stock, int fd, int ret);
 //static char	*ft_strnndup(char *s1, int c);
 //static int	ft_counting(char *str, char c);

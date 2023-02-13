@@ -15,10 +15,10 @@ INCLUDES	= includes/
 NAME		= so_long
 PATH_MLX	= mlx
 CC 			= clang
-CFLAGS		= -Wall -Wextra -Werror  #-fsanitize=address -g3
+CFLAGS		= -Wall -Wextra -Werror -g3 #-fsanitize=address -g3
 RM			= rm -f
 NAME		= so_long
-FLAGS		= -ldl -Imlx -Lmlx -lmlx -lm -lbsd -lXext -lX11
+FLAGS		= #-ldl -Imlx -Lmlx -lmlx -lm -lbsd -lXext -lX11
 
 all: 		${NAME}
 

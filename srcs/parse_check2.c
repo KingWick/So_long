@@ -6,7 +6,7 @@
 /*   By: akdjebal <akdjebal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/05 22:54:41 by akram             #+#    #+#             */
-/*   Updated: 2023/02/06 15:12:09 by akdjebal         ###   ########.fr       */
+/*   Updated: 2023/02/13 17:34:05 by akdjebal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,6 +52,7 @@ int	check_arg(int ac, char **av)
 		ft_error("Invalid files\n");
 		close(fd);
 	}
-	close(fd);
+	if (fd > 0)
+		close(fd);
 	return (0);
 }

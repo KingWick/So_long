@@ -6,7 +6,7 @@
 /*   By: akdjebal <akdjebal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/03 19:24:43 by akram             #+#    #+#             */
-/*   Updated: 2023/02/09 15:28:00 by akdjebal         ###   ########.fr       */
+/*   Updated: 2023/02/13 17:19:44 by akdjebal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,32 +77,31 @@ void	check_map(char **str)
 	check_wall(str);
 }
 
-t_game	check_element(char **str, t_game game)
+void	check_element(char **str, t_game *game)
 {
 	int		i;
 	int		x;
 
 	x = 0;
 	i = 0;
-	game = init_game(game);
+	init_game(game);
 	while (str[i])
 	{
 		x = 0;
 		while (str[i][x])
 		{
 			if (str[i][x] == 'P')
-				game.player++;
+				game->player++;
 			else if (str[i][x] == 'E')
-				game.exit++;
+				game->exit++;
 			else if (str[i][x] == 'C')
-				game.collectible++;
+				game->collectible++;
 			x++;
 		}
 		i++;
 	}
-	if (game.exit != 1 || game.player != 1 || game.collectible == 0)
+	if (game->exit != 1 || game->player != 1 || game->collectible == 0)
 		ft_error("Error\nMissing elements or extra elements");
-	return (game);
 }
 
 t_game	ultimate_parsing(int fd)
@@ -123,7 +122,7 @@ t_game	ultimate_parsing(int fd)
 	free(map);
 	check_line_map(game.map);
 	check_map(game.map);
-	game = check_element(game.map, game);
+	check_element(game.map, &game);
 	printf("game === %s\n", game.map[0]);
 	return (game);
 }

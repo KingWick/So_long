@@ -6,7 +6,7 @@
 /*   By: akdjebal <akdjebal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/05 23:01:13 by akram             #+#    #+#             */
-/*   Updated: 2023/02/13 14:56:26 by akdjebal         ###   ########.fr       */
+/*   Updated: 2023/02/13 17:39:26 by akdjebal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,5 +35,13 @@ int	main(int ac, char **av)
 	if (ft_check_items(&game) == 0)
 		ft_error_path_collect(&game);
 	//game = window(game);
+
+	for (int i = 0; game.map[i] != 0; i++)
+		free(game.map[i]);
+	free(game.map);
+	for (int i = 0; game.path[i] != 0; i++)
+		free(game.path[i]);
+	free(game.path);
+	close(fd);
 	printf("collectible vaut == [%d]\n", game.collectible);
 }
