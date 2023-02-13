@@ -6,7 +6,7 @@
 /*   By: akdjebal <akdjebal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/03 19:25:10 by akram             #+#    #+#             */
-/*   Updated: 2023/02/09 16:52:16 by akdjebal         ###   ########.fr       */
+/*   Updated: 2023/02/13 13:31:46 by akdjebal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,22 +27,22 @@ int	ft_error_free(t_game *game)
 	return (0);
 }
 
-void	ft_error_path(t_game *map)
+void	ft_error_path(t_game *game)
 {
-	//ft_free_path(map);
-	//ft_free_tab(map);
-	//free(map);
-	(void)map;
+	//ft_free_path(game);
+	//ft_free_tab(game);
+	//free(game);
+	(void)game;
 	printf("invalid path\n");
 	exit (EXIT_FAILURE);
 }
 
-void	ft_error_path_collect(t_game *map)
+void	ft_error_path_collect(t_game *game)
 {
-	//ft_free_path(map);
-	//ft_free_tab(map);
-	//free(map);
-	(void)map;
+	//ft_free_path(game);
+	//ft_free_tab(game);
+	//free(game);
+	(void)game;
 	printf("invalid path collect\n");
 	exit (EXIT_FAILURE);
 }

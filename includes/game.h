@@ -6,7 +6,7 @@
 /*   By: akdjebal <akdjebal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/03 19:24:43 by akram             #+#    #+#             */
-/*   Updated: 2023/02/10 13:28:33 by akdjebal         ###   ########.fr       */
+/*   Updated: 2023/02/13 14:56:34 by akdjebal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,30 +61,31 @@ t_game	window(t_game game);
 t_game	texture(t_game game);
 
 //------------check_path--------//
+int		ft_path(t_game *game, int i, int j);
 void	ft_backtacking(t_game *game, int i, int j);
 void	ft_pos_player(t_game *game, int *x, int *y);
 void	ft_pos_exit(t_game *game, int *x, int *y);
-void	ft_check_collect(t_game *map);
-void	ft_items(t_game *map);
-void	ft_error_path_collect(t_game *map);
-int		ft_path(t_game *map, int i, int j);
-int		ft_check_items(t_game *map);
+void	ft_check_collect(t_game *game);
+void	ft_items(t_game *game);
+int		ft_check_items(t_game *game);
+void	ft_null_map(char *path, t_game *game);
 
 //--------------Error--------------//
+void	ft_error_path_collect(t_game *game);
 int		ft_error_free(t_game *game);
 int		ft_error(char *str);
-void	ft_error_path(t_game *map);
+void	ft_error_path(t_game *game);
 
-//------------Get_split_cat---------//
+//------------Utils_libft---------//
 char	**ft_split(char *str, char c);
-char	*ft_strcat(char *dest, char *src);
-char	*ft_strjoin_free(char *s1, char *s2);
-char	*ft_substr(char const *s, unsigned int start, size_t len);
+ char	*ft_strcat(char *dest, char *src);
+// char	*ft_strjoin_free(char *s1, char *s2);
+ char	*ft_substr(char const *s, unsigned int start, size_t len);
 char	*ft_strchr(const char *s, int c);
-char	*ft_strdup(const char *s);
-int		get_next_line(int fd, char **line);
-int		ft_strlen(const char *s);
-int		boucle(char **stock, int fd, int ret);
+ char	*ft_strdup(const char *s);
+ int		get_next_line(int fd, char **line);
+ int		ft_strlen(const char *s);
+// int		boucle(char **stock, int fd, int ret);
 //static char	*ft_strnndup(char *s1, int c);
 //static int	ft_counting(char *str, char c);
 

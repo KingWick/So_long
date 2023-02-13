@@ -6,18 +6,18 @@
 /*   By: akdjebal <akdjebal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/03 19:24:43 by akram             #+#    #+#             */
-/*   Updated: 2023/02/10 13:39:45 by akdjebal         ###   ########.fr       */
+/*   Updated: 2023/02/13 13:35:36 by akdjebal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/game.h"
 
-void	ft_null_map(char *path, t_game *map)
+void	ft_null_map(char *path, t_game *game)
 {
 	int	i;
 
 	i = 0;
-	while (i < map->width)
+	while (i < game->width)
 	{
 		path[i] = '0';
 		i++;
@@ -41,27 +41,27 @@ void	ft_check_collect(t_game *game)
 	game->path[i] = NULL;
 }
 
-void	ft_items(t_game *map)
+void	ft_items(t_game *game)
 {
 	int	i;
 	int	j;
 
 	i = 0;
 	j = 0;
-	while (i < map->height)
+	while (i < game->height)
 	{
 		j = 0;
-		while (j < map->width)
+		while (j < game->width)
 		{
-			if (map->map[i][j] == 'C' && map->path[i][j] == '0')
-				map->path[i][j] = 'C';
+			if (game->map[i][j] == 'C' && game->path[i][j] == '0')
+				game->path[i][j] = 'C';
 			j++;
 		}
 		i++;
 	}
 }
 
-int	ft_check_items(t_game *map)
+int	ft_check_items(t_game *game)
 {
 	int	i;
 	int	j;
@@ -70,12 +70,12 @@ int	ft_check_items(t_game *map)
 	i = 0;
 	j = 0;
 	count_c = 0;
-	while (i < map->height)
+	while (i < game->height)
 	{
 		j = 0;
-		while (j < map->width)
+		while (j < game->width)
 		{
-			if (map->path[i][j] == 'C')
+			if (game->path[i][j] == 'C')
 				count_c ++;
 			j++;
 		}

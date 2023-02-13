@@ -6,7 +6,7 @@
 /*   By: akdjebal <akdjebal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/05 23:01:13 by akram             #+#    #+#             */
-/*   Updated: 2023/02/09 17:06:07 by akdjebal         ###   ########.fr       */
+/*   Updated: 2023/02/13 14:56:26 by akdjebal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,9 @@ int	main(int ac, char **av)
 
 	game.height = count_line(game.map);
 	game.width = ft_strlen(game.map[0]);
+	printf("\nValeur de hauteur == %d\n", game.height);
+	printf("\nValeur de largeur == %d\n", game.width);
+
 	ft_pos_exit(&game, &x, &y);
 	if (!ft_path(&game, x, y))
 		ft_error_path(&game);
