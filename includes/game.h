@@ -6,7 +6,7 @@
 /*   By: akdjebal <akdjebal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/03 19:24:43 by akram             #+#    #+#             */
-/*   Updated: 2023/02/14 14:58:25 by akdjebal         ###   ########.fr       */
+/*   Updated: 2023/02/14 18:15:24 by akdjebal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,6 @@ typedef struct s_game
 	void	*win;
 	void	*img;
 	void	*wall;
-	void	*floor;
 	void	*p;
 	void	*f;
 	void	*e;
@@ -62,7 +61,7 @@ int		count_line(char **str);
 
 //----------------graphic_Part----------------//
 void	window(t_game *game);
-void	texture(t_game *game);
+int		texture(t_game *game);
 
 //------------check_path--------//
 void 	ft_check_path(t_game *game, int x, int y);

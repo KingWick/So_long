@@ -6,7 +6,7 @@
 /*   By: akdjebal <akdjebal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/03 19:24:59 by akram             #+#    #+#             */
-/*   Updated: 2023/02/14 16:31:15 by akdjebal         ###   ########.fr       */
+/*   Updated: 2023/02/14 18:23:39 by akdjebal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,6 @@ void	init_game(t_game *game)
 	game->win = NULL;
 	game->img = NULL;
 	game->wall = NULL;
-	game->floor = NULL;
 	game->p = NULL;
 	game->f = NULL;
 	game->e = NULL;
@@ -33,45 +32,45 @@ void	init_game(t_game *game)
 void window(t_game *game)
 {
 	game->mlx = mlx_init(); //initialisation de la bibli mlx renvoi Null si echoue 
+	if (game->mlx == NULL)
+		ft_error("Error\nInitialization failed");
 	game->win = mlx_new_window(game->mlx, WIN_WIDTH, WIN_HEIGHT, "So long");
-	texture(game);
+	if (texture(game) == 1)
+		ft_error("Error\nloading textures\n");
+	mlx_loop(game->mlx);
 }
 
-void texture(t_game *game)
+int texture(t_game *game)
 {
-	int x = 64;
-	
-	game->p = mlx_xpm_file_to_image(game->mlx, "./img/kratos.xpm", &x,&x);
-	game->wall = mlx_xpm_file_to_image(game->mlx, "./img/wall.xpm", &x,&x);
-	game->f = mlx_xpm_file_to_image(game->mlx, "./img/floor.xpm", &x,&x);
-	game->c = mlx_xpm_file_to_image(game->mlx, "./img/coins.xpm", &x,&x);
-	game->e = mlx_xpm_file_to_image(game->mlx, "./img/coins.xpm", &x,&x);
-	
+	int x;
+	int y;
+
+	x = 0;
+	y = 0;
+	// while (i < ft_strlen(game.map[0]))// i < le nombre de lignes de la map
+	// {
+	// 	while (j )// j < ft_strlen d'une ligne
+	// 	{
+	// 		if (game.map[i][j] == '1')
+	// 			mlx_put_image_to_window(game->mlx, game->win, game->p, i * 64, j * 64);
+	// 			j++;
+	// 	}
+	// 	i+;
+	// }	
+	game->p = mlx_xpm_file_to_image(game->mlx, "./img/kratos.xpm", &x, &y);
+	if (game->p == NULL || x != 64 || y != 64)
+		return (1);
+	game->wall = mlx_xpm_file_to_image(game->mlx, "./img/wall.xpm", &x, &y);
+	if (game->wall == NULL || x != 64 || y != 64)
+		return (1);
+	game->f = mlx_xpm_file_to_image(game->mlx, "./img/floor.xpm", &x, &y);
+	if (game->f == NULL || x != 64 || y != 64)
+		return (1);
+	game->c = mlx_xpm_file_to_image(game->mlx, "./img/coins.xpm", &x, &y);
+	if (game->c == NULL || x != 64 || y != 64)
+		return (1);
+	game->e = mlx_xpm_file_to_image(game->mlx, "./img/coins.xpm", &x, &y);
+	if (game->e == NULL || x != 64 || y != 64)
+		return (1);
+	return (0);
 }
-
-// t_game	dl_texture(t_game game)
-// {
-// 	int	size;
-
-// 	size = 64;
-// 	game.wall = mlx_xpm_file_to_image(game.mlx,
-// 			"./textures/wall-64t.xpm", &size, &size);
-// 	game.img_player = mlx_xpm_file_to_image(game.mlx,
-// 			"./textures/player-64.xpm", &size, &size);
-// 	game.img_coin = mlx_xpm_file_to_image(game.mlx,
-// 			"./textures/collectible-64.xpm", &size, &size);
-// 	game.img_exi = mlx_xpm_file_to_image(game.mlx,
-// 			"./textures/exit-64.xpm", &size, &size);
-// 	game.floor = mlx_xpm_file_to_image(game.mlx,
-// 			"./textures/bottom-64.xpm", &size, &size);
-// 	return (game);
-// }
-
-// t_game	open_window(t_game game)
-// {
-// 	game.mlx = mlx_init();
-// 	game.win = mlx_new_window(game.mlx, game.nb_char * 64,
-// 			game.line * 64, "so_long");
-// 	game = dl_texture(game);
-// 	return (game);
-// }
