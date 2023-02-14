@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   parse_check.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: akdjebal <akdjebal@student.42.fr>          +#+  +:+       +#+        */
+/*   By: akram <akram@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/03 19:24:43 by akram             #+#    #+#             */
-/*   Updated: 2023/02/13 17:19:44 by akdjebal         ###   ########.fr       */
+/*   Updated: 2023/02/14 00:09:09 by akram            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -104,9 +104,8 @@ void	check_element(char **str, t_game *game)
 		ft_error("Error\nMissing elements or extra elements");
 }
 
-t_game	ultimate_parsing(int fd)
+void	ultimate_parsing(int fd,t_game	*game)
 {
-	t_game	game;
 	char	*line;
 	char	*map;
 
@@ -118,11 +117,10 @@ t_game	ultimate_parsing(int fd)
 	}
 	map = ft_strcat(map, line);
 	free(line);
-	game.map = ft_split(map, '|');
+	game->map = ft_split(map, '|');
 	free(map);
-	check_line_map(game.map);
-	check_map(game.map);
-	check_element(game.map, &game);
-	printf("game === %s\n", game.map[0]);
-	return (game);
+	check_line_map(game->map);
+	check_map(game->map);
+	check_element(game->map, game);
+	printf("game === %s\n", game->map[0]);
 }

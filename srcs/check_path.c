@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   check_path.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: akdjebal <akdjebal@student.42.fr>          +#+  +:+       +#+        */
+/*   By: akram <akram@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/03 19:24:43 by akram             #+#    #+#             */
-/*   Updated: 2023/02/13 14:56:51 by akdjebal         ###   ########.fr       */
+/*   Updated: 2023/02/14 00:57:56 by akram            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -99,4 +99,19 @@ int	ft_path(t_game *game, int i, int j)
 		|| game->path[i][j + 1] == '1' || game->path[i][j - 1] == '1')
 		return (1);
 	return (0);
+}
+
+void ft_check_path(t_game *game, int x, int y)
+{
+	game->height = count_line(game->map);
+	game->width = ft_strlen(game->map[0]);
+	
+	ft_pos_exit(game, &x, &y);
+	if (ft_path(game, x, y) == 0)
+		ft_error_path(game);
+	ft_items(game);
+	if (ft_check_items(game) == 0)
+		ft_error_path_collect(game);
+	ft_free_map(game);
+	ft_free_path(game);
 }
