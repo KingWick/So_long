@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_error.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: akram <akram@student.42.fr>                +#+  +:+       +#+        */
+/*   By: akdjebal <akdjebal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/03 19:25:10 by akram             #+#    #+#             */
-/*   Updated: 2023/02/14 00:50:11 by akram            ###   ########.fr       */
+/*   Updated: 2023/02/14 14:59:55 by akdjebal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,11 +39,12 @@ void ft_free_path(t_game *game)
 
 	while (game->path[i])
 	{
-		free(game->path[i]);
+		free(game->path[i]);	//PROBLEME DE FREE LORSQUE LE CHEMIN NEST PAS VALIDE A REGLER  
 		i++;
 	}
 	free(game->path);
 }
+
 void	ft_error_path(t_game *game)
 {
 	//ft_free_path(game);

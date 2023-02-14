@@ -6,7 +6,7 @@
 /*   By: akdjebal <akdjebal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/03 19:24:59 by akram             #+#    #+#             */
-/*   Updated: 2023/02/13 17:11:48 by akdjebal         ###   ########.fr       */
+/*   Updated: 2023/02/14 16:31:15 by akdjebal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,10 @@ void	init_game(t_game *game)
 	game->img = NULL;
 	game->wall = NULL;
 	game->floor = NULL;
+	game->p = NULL;
+	game->f = NULL;
+	game->e = NULL;
+	game->c = NULL;
 	game->player = 0;
 	game->height = 0;
 	game->width = 0;
@@ -26,22 +30,24 @@ void	init_game(t_game *game)
 	game->line = 0;
 }
 
-// t_game window(t_game game)
-// {
-// 	game.mlx = mlx_init(); //initialisation de la bibli mlx renvoi Null si echoue 
-// 	game.win = mlx_new_window(game.mlx, WIN_WIDTH, WIN_HEIGHT, "So long");
-// 	return (game);
-// }
+void window(t_game *game)
+{
+	game->mlx = mlx_init(); //initialisation de la bibli mlx renvoi Null si echoue 
+	game->win = mlx_new_window(game->mlx, WIN_WIDTH, WIN_HEIGHT, "So long");
+	texture(game);
+}
 
-// t_game texture(t_game game)
-// {
-// 	int x = 64;
+void texture(t_game *game)
+{
+	int x = 64;
 	
-// 	game.player = mlx_xpm_file_to_image(game.mlx, "kratos.xpm", &x,&x);
-// 	game.wall = mlx_xpm_file_to_image(game.mlx, "./img/wall2.xpm", &x,&x);
-// 	game.floor = mlx_xpm_file_to_image(game.mlx, "./img/wall2.xpm", &x,&x);
-// 	return (game);
-// }
+	game->p = mlx_xpm_file_to_image(game->mlx, "./img/kratos.xpm", &x,&x);
+	game->wall = mlx_xpm_file_to_image(game->mlx, "./img/wall.xpm", &x,&x);
+	game->f = mlx_xpm_file_to_image(game->mlx, "./img/floor.xpm", &x,&x);
+	game->c = mlx_xpm_file_to_image(game->mlx, "./img/coins.xpm", &x,&x);
+	game->e = mlx_xpm_file_to_image(game->mlx, "./img/coins.xpm", &x,&x);
+	
+}
 
 // t_game	dl_texture(t_game game)
 // {

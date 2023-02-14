@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   so_long.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: akram <akram@student.42.fr>                +#+  +:+       +#+        */
+/*   By: akdjebal <akdjebal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/05 23:01:13 by akram             #+#    #+#             */
-/*   Updated: 2023/02/14 00:57:19 by akram            ###   ########.fr       */
+/*   Updated: 2023/02/14 13:40:13 by akdjebal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,6 @@ int	main(int ac, char **av)
 	check_arg(ac, av);
 	ultimate_parsing(fd, &game);
 	ft_check_path(&game,x,y);
-	
+	window(&game);
 	close(fd);
-	printf("collectible vaut == [%d]\n", game.collectible);
 }

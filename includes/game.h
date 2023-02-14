@@ -3,19 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   game.h                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: akram <akram@student.42.fr>                +#+  +:+       +#+        */
+/*   By: akdjebal <akdjebal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/03 19:24:43 by akram             #+#    #+#             */
-/*   Updated: 2023/02/14 00:55:55 by akram            ###   ########.fr       */
+/*   Updated: 2023/02/14 14:58:25 by akdjebal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef GAME_H
 # define GAME_H
 
-// # include "../mlx/mlx.h"
-// # include <X11/X.h>
-// # include <X11/keysym.h>
+# include "../mlx/mlx.h"
+# include <X11/X.h>
+# include <X11/keysym.h>
 # include <stdio.h>
 # include <stdlib.h>
 # include <unistd.h>
@@ -33,13 +33,17 @@ typedef struct s_game
 {
 	char	**map;
 	char	**path;
-	int		height;
-	int		width;
 	void	*mlx;
 	void	*win;
 	void	*img;
 	void	*wall;
 	void	*floor;
+	void	*p;
+	void	*f;
+	void	*e;
+	void	*c;
+	int		height;
+	int		width;
 	int		player;
 	int		exit;
 	int		collectible;
@@ -57,8 +61,8 @@ int		valid_files(const char *s1, const char *s2);
 int		count_line(char **str);
 
 //----------------graphic_Part----------------//
-t_game	window(t_game game);
-t_game	texture(t_game game);
+void	window(t_game *game);
+void	texture(t_game *game);
 
 //------------check_path--------//
 void 	ft_check_path(t_game *game, int x, int y);
@@ -73,7 +77,6 @@ int		ft_check_items(t_game *game);
 
 //--------------Error--------------//
 void	ft_error_path_collect(t_game *game);
-int		ft_error_free(t_game *game);
 int		ft_error(char *str);
 void	ft_error_path(t_game *game);
 void 	ft_free_map(t_game *game);
