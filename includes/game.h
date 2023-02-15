@@ -6,7 +6,7 @@
 /*   By: akdjebal <akdjebal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/03 19:24:43 by akram             #+#    #+#             */
-/*   Updated: 2023/02/14 18:15:24 by akdjebal         ###   ########.fr       */
+/*   Updated: 2023/02/15 17:41:54 by akdjebal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,6 @@ typedef struct s_game
 	char	**path;
 	void	*mlx;
 	void	*win;
-	void	*img;
 	void	*wall;
 	void	*p;
 	void	*f;
@@ -46,7 +45,6 @@ typedef struct s_game
 	int		player;
 	int		exit;
 	int		collectible;
-	int		line;
 }				t_game;
 
 //------------init_game--and_check--------//
@@ -60,8 +58,15 @@ int		valid_files(const char *s1, const char *s2);
 int		count_line(char **str);
 
 //----------------graphic_Part----------------//
+void	aff_map(t_game *game);
 void	window(t_game *game);
+void	display_wall(t_game *game);
+void	display_player(t_game *game);
+void	display_exit(t_game *game);
+void	display_floor(t_game *game);
+void	display_collectible(t_game *game);
 int		texture(t_game *game);
+
 
 //------------check_path--------//
 void 	ft_check_path(t_game *game, int x, int y);

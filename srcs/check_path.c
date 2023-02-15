@@ -6,7 +6,7 @@
 /*   By: akdjebal <akdjebal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/03 19:24:43 by akram             #+#    #+#             */
-/*   Updated: 2023/02/14 13:19:21 by akdjebal         ###   ########.fr       */
+/*   Updated: 2023/02/15 17:30:37 by akdjebal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -112,6 +112,6 @@ void ft_check_path(t_game *game, int x, int y)
 	ft_items(game);
 	if (ft_check_items(game) == 0)
 		ft_error_path_collect(game);
-	ft_free_map(game);
+	//ft_free_map(game);
 	ft_free_path(game);
 }

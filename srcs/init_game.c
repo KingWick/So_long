@@ -6,7 +6,7 @@
 /*   By: akdjebal <akdjebal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/03 19:24:59 by akram             #+#    #+#             */
-/*   Updated: 2023/02/14 18:23:39 by akdjebal         ###   ########.fr       */
+/*   Updated: 2023/02/15 18:00:45 by akdjebal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	init_game(t_game *game)
 {
 	game->win = NULL;
-	game->img = NULL;
+	game->mlx = NULL;
 	game->wall = NULL;
 	game->p = NULL;
 	game->f = NULL;
@@ -26,17 +26,17 @@ void	init_game(t_game *game)
 	game->width = 0;
 	game->exit = 0;
 	game->collectible = 0;
-	game->line = 0;
 }
 
 void window(t_game *game)
 {
 	game->mlx = mlx_init(); //initialisation de la bibli mlx renvoi Null si echoue 
 	if (game->mlx == NULL)
-		ft_error("Error\nInitialization failed");
-	game->win = mlx_new_window(game->mlx, WIN_WIDTH, WIN_HEIGHT, "So long");
+		ft_error("Error\nInitialization failed");//a cet endroit du code on a malloc game->map, game->path, mlx
+	game->win = mlx_new_window(game->mlx, game->width * 64, game->height * 64, "So long");
 	if (texture(game) == 1)
 		ft_error("Error\nloading textures\n");
+	aff_map(game);
 	mlx_loop(game->mlx);
 }
 
@@ -47,16 +47,6 @@ int texture(t_game *game)
 
 	x = 0;
 	y = 0;
-	// while (i < ft_strlen(game.map[0]))// i < le nombre de lignes de la map
-	// {
-	// 	while (j )// j < ft_strlen d'une ligne
-	// 	{
-	// 		if (game.map[i][j] == '1')
-	// 			mlx_put_image_to_window(game->mlx, game->win, game->p, i * 64, j * 64);
-	// 			j++;
-	// 	}
-	// 	i+;
-	// }	
 	game->p = mlx_xpm_file_to_image(game->mlx, "./img/kratos.xpm", &x, &y);
 	if (game->p == NULL || x != 64 || y != 64)
 		return (1);
@@ -69,8 +59,17 @@ int texture(t_game *game)
 	game->c = mlx_xpm_file_to_image(game->mlx, "./img/coins.xpm", &x, &y);
 	if (game->c == NULL || x != 64 || y != 64)
 		return (1);
-	game->e = mlx_xpm_file_to_image(game->mlx, "./img/coins.xpm", &x, &y);
+	game->e = mlx_xpm_file_to_image(game->mlx, "./img/exit.xpm", &x, &y);
 	if (game->e == NULL || x != 64 || y != 64)
 		return (1);
 	return (0);
+}
+
+void	aff_map(t_game *game)
+{
+	display_wall(game);
+	display_floor(game);
+	display_player(game);
+	display_collectible(game);
+	display_exit(game);
 }

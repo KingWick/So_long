@@ -6,7 +6,7 @@
 /*   By: akdjebal <akdjebal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/03 19:24:43 by akram             #+#    #+#             */
-/*   Updated: 2023/02/14 13:49:20 by akdjebal         ###   ########.fr       */
+/*   Updated: 2023/02/15 17:36:32 by akdjebal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -104,7 +104,7 @@ void	check_element(char **str, t_game *game)
 		ft_error("Error\nMissing elements or extra elements");
 }
 
-void	ultimate_parsing(int fd,t_game	*game)
+void	ultimate_parsing(int fd, t_game	*game)
 {
 	char	*line;
 	char	*map;
