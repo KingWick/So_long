@@ -6,6 +6,7 @@ SRCS		= 	srcs/so_long.c \
 				srcs/check_path2.c \
 				srcs/init_game.c \
 				srcs/init_game2.c \
+				srcs/move.c \
 				srcs/split_and_cat.c \
 			  	srcs/get_next_line.c \
 			  	srcs/get_next_line_utils.c \

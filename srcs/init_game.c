@@ -6,7 +6,7 @@
 /*   By: akdjebal <akdjebal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/03 19:24:59 by akram             #+#    #+#             */
-/*   Updated: 2023/02/15 18:00:45 by akdjebal         ###   ########.fr       */
+/*   Updated: 2023/02/16 18:45:34 by akdjebal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ void	init_game(t_game *game)
 	game->width = 0;
 	game->exit = 0;
 	game->collectible = 0;
+	game->nb_mouv = 0;
 }
 
 void window(t_game *game)
@@ -36,7 +37,10 @@ void window(t_game *game)
 	game->win = mlx_new_window(game->mlx, game->width * 64, game->height * 64, "So long");
 	if (texture(game) == 1)
 		ft_error("Error\nloading textures\n");
+	
 	aff_map(game);
+	
+	mlx_key_hook(game->win, keys, game);
 	mlx_loop(game->mlx);
 }
 
@@ -72,4 +76,19 @@ void	aff_map(t_game *game)
 	display_player(game);
 	display_collectible(game);
 	display_exit(game);
+}
+
+int keys(int keycode, t_game *game)
+{
+	if (keycode == ESCAPE)
+	{
+		ft_free_map(game);
+		exit(1);
+	}
+	
+	if (keycode == RIGHT) {
+		
+		right(game);
+	}
+	return (0);
 }

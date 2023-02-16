@@ -6,7 +6,7 @@
 /*   By: akdjebal <akdjebal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/03 19:24:43 by akram             #+#    #+#             */
-/*   Updated: 2023/02/16 15:11:32 by akdjebal         ###   ########.fr       */
+/*   Updated: 2023/02/16 18:43:16 by akdjebal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,8 @@
 //# include <sys/stat.h>
 # include <fcntl.h>
 
-# define MLX_ERROR 1
+# define ESCAPE 65307
+# define RIGHT	65363
 # define WIN_WIDTH 1980
 # define WIN_HEIGHT 1080
 # define BUFFER_SIZE 1
@@ -45,6 +46,7 @@ typedef struct s_game
 	int		player;
 	int		exit;
 	int		collectible;
+	int		nb_mouv;
 }				t_game;
 
 //------------init_game--and_check--------//
@@ -56,7 +58,9 @@ void	check_wall(char **str);
 int		check_arg(int ac, char **av);
 int		valid_files(const char *s1, const char *s2);
 int		count_line(char **str);
-void print_tab(char **tab);
+int 	keys(int keycode, t_game *game);
+
+void 	print_tab(char **tab);
 
 //----------------graphic_Part----------------//
 void	aff_map(t_game *game);
@@ -68,6 +72,9 @@ void	display_floor(t_game *game);
 void	display_collectible(t_game *game);
 int		texture(t_game *game);
 
+//----------------Mouv----------------//.
+int	right(t_game *game);
+int	moove_right(t_game *game);
 
 //------------check_path--------//
 void 	ft_check_path(t_game *game, int x, int y);
