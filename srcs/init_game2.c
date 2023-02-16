@@ -25,7 +25,7 @@ void	display_wall(t_game *game)
 					game->width * 64, game->height * 64);
 			game->width++;
 		}
-		printf("s == %s\n", game->map[game->height]);
+		//printf("s == %s\n", game->map[game->height]);
 		game->height++;
 	}
 }

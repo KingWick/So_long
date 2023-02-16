@@ -6,7 +6,7 @@
 /*   By: akdjebal <akdjebal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/03 19:24:43 by akram             #+#    #+#             */
-/*   Updated: 2023/02/15 17:30:37 by akdjebal         ###   ########.fr       */
+/*   Updated: 2023/02/16 15:24:15 by akdjebal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,7 +87,15 @@ void	ft_backtacking(t_game *game, int i, int j)
 		ft_backtacking(game, i - 1, j);
 	}
 }
-
+void print_tab(char **tab)
+{
+	int i=0;
+	while(tab[i])
+	{
+		printf("%s\n",tab[i]);
+		i++;
+	}
+}
 int	ft_path(t_game *game, int i, int j)
 {
 	ft_pos_player(game, &i, &j);
@@ -95,6 +103,10 @@ int	ft_path(t_game *game, int i, int j)
 	ft_backtacking(game, i, j);
 	ft_pos_exit(game, &i, &j);
 	game->path[i][j] = 'E';
+	printf("\nMAP-DESCRIPTOR\n");
+	print_tab(game->map);
+	printf("\nPATH-DESCRIPTOR\n");
+	print_tab(game->path);
 	if (game->path[i + 1][j] == '1' || game->path[i - 1][j] == '1'
 		|| game->path[i][j + 1] == '1' || game->path[i][j - 1] == '1')
 		return (1);
@@ -106,7 +118,6 @@ void ft_check_path(t_game *game, int x, int y)
 	game->height = count_line(game->map);
 	game->width = ft_strlen(game->map[0]);
 	
-	ft_pos_exit(game, &x, &y);
 	if (ft_path(game, x, y) == 0)
 		ft_error_path(game);
 	ft_items(game);

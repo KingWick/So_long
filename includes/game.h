@@ -6,7 +6,7 @@
 /*   By: akdjebal <akdjebal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/03 19:24:43 by akram             #+#    #+#             */
-/*   Updated: 2023/02/15 17:41:54 by akdjebal         ###   ########.fr       */
+/*   Updated: 2023/02/16 15:11:32 by akdjebal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,6 +56,7 @@ void	check_wall(char **str);
 int		check_arg(int ac, char **av);
 int		valid_files(const char *s1, const char *s2);
 int		count_line(char **str);
+void print_tab(char **tab);
 
 //----------------graphic_Part----------------//
 void	aff_map(t_game *game);

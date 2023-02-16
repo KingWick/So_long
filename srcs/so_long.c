@@ -6,7 +6,7 @@
 /*   By: akdjebal <akdjebal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/05 23:01:13 by akram             #+#    #+#             */
-/*   Updated: 2023/02/15 17:39:00 by akdjebal         ###   ########.fr       */
+/*   Updated: 2023/02/16 15:24:55 by akdjebal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,6 @@ int	main(int ac, char **av)
 	check_arg(ac, av);
 	ultimate_parsing(fd, &game);
 	ft_check_path(&game,x,y);
-	printf("appel main de height == %d\n", game.height);
 	window(&game);
 	close(fd);
 }

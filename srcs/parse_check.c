@@ -6,7 +6,7 @@
 /*   By: akdjebal <akdjebal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/03 19:24:43 by akram             #+#    #+#             */
-/*   Updated: 2023/02/15 17:36:32 by akdjebal         ###   ########.fr       */
+/*   Updated: 2023/02/16 15:24:48 by akdjebal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -122,5 +122,4 @@ void	ultimate_parsing(int fd, t_game	*game)
 	check_line_map(game->map);
 	check_map(game->map);
 	check_element(game->map, game);
-	printf("game === %s\n", game->map[0]);
 }
