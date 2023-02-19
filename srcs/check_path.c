@@ -6,7 +6,7 @@
 /*   By: akdjebal <akdjebal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/03 19:24:43 by akram             #+#    #+#             */
-/*   Updated: 2023/02/16 18:38:53 by akdjebal         ###   ########.fr       */
+/*   Updated: 2023/02/19 17:24:55 by akdjebal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	ft_pos_player(t_game *game, int *x, int *y)
 {
 	int		i;
-	int		j;
+	int		j = 0;
 	char	*line;
 
 	i = 0;

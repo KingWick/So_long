@@ -6,7 +6,7 @@
 /*   By: akdjebal <akdjebal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/03 19:24:43 by akram             #+#    #+#             */
-/*   Updated: 2023/02/18 17:31:56 by akdjebal         ###   ########.fr       */
+/*   Updated: 2023/02/19 17:40:59 by akdjebal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,8 +76,6 @@ int		texture(t_game *game);
 //----------------Mouv----------------//.
 int	right(t_game *game);
 int	left(t_game *game);
-int	moove_right(t_game *game);
-int	moove_left(t_game *game);
 
 //------------check_path--------//
 void 	ft_check_path(t_game *game, int x, int y);
