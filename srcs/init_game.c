@@ -6,7 +6,7 @@
 /*   By: akdjebal <akdjebal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/03 19:24:59 by akram             #+#    #+#             */
-/*   Updated: 2023/02/19 17:18:01 by akdjebal         ###   ########.fr       */
+/*   Updated: 2023/02/19 18:48:37 by akdjebal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,10 +85,13 @@ int keys(int keycode, t_game *game)
 		ft_free_map(game);
 		exit(1);
 	}
-	
 	if (keycode == RIGHT)
 		right(game);
 	if (keycode == LEFT)
 		left(game);
+	if (keycode == UP)
+		up(game);
+	if (keycode == DOWN)
+		down(game);
 	return (0);
 }

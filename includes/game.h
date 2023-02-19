@@ -6,7 +6,7 @@
 /*   By: akdjebal <akdjebal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/03 19:24:43 by akram             #+#    #+#             */
-/*   Updated: 2023/02/19 17:40:59 by akdjebal         ###   ########.fr       */
+/*   Updated: 2023/02/19 17:49:28 by akdjebal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,11 +24,13 @@
 //# include <sys/stat.h>
 # include <fcntl.h>
 
-# define ESCAPE 65307
+# define UP		65362
 # define RIGHT	65363
 # define LEFT	65361
-# define WIN_WIDTH 1980
-# define WIN_HEIGHT 1080
+# define DOWN	65364
+# define ESCAPE 65307
+// # define WIN_WIDTH 1980
+// # define WIN_HEIGHT 1080
 # define BUFFER_SIZE 1
 
 typedef struct s_game
@@ -76,6 +78,8 @@ int		texture(t_game *game);
 //----------------Mouv----------------//.
 int	right(t_game *game);
 int	left(t_game *game);
+int up(t_game *game);
+int down(t_game *game);
 
 //------------check_path--------//
 void 	ft_check_path(t_game *game, int x, int y);
