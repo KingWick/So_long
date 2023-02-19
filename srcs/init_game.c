@@ -6,7 +6,7 @@
 /*   By: akdjebal <akdjebal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/03 19:24:59 by akram             #+#    #+#             */
-/*   Updated: 2023/02/19 18:48:37 by akdjebal         ###   ########.fr       */
+/*   Updated: 2023/02/19 19:43:16 by akdjebal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,6 @@ void window(t_game *game)
 		ft_error("Error\nloading textures\n");
 	
 	aff_map(game);
-	
 	mlx_key_hook(game->win, keys, game);
 	mlx_loop(game->mlx);
 }
@@ -93,5 +92,6 @@ int keys(int keycode, t_game *game)
 		up(game);
 	if (keycode == DOWN)
 		down(game);
+	aff_map(game);
 	return (0);
 }
