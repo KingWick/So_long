@@ -6,7 +6,7 @@
 /*   By: akdjebal <akdjebal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/03 19:24:43 by akram             #+#    #+#             */
-/*   Updated: 2023/02/20 14:26:28 by akdjebal         ###   ########.fr       */
+/*   Updated: 2023/02/20 14:55:01 by akdjebal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,10 +24,10 @@
 //# include <sys/stat.h>
 # include <fcntl.h>
 
-# define UP		65362
-# define RIGHT	65363
-# define LEFT	65361
-# define DOWN	65364
+# define UP		119
+# define RIGHT	100
+# define LEFT	97
+# define DOWN	115
 # define ESCAPE 65307
 // # define WIN_WIDTH 1980
 // # define WIN_HEIGHT 1080
@@ -61,13 +61,9 @@ void	check_wall(char **str);
 int		check_arg(int ac, char **av);
 int		valid_files(const char *s1, const char *s2);
 int		count_line(char **str);
-int 	keys(int keycode, t_game *game);
-
-
-
+int		keys(int keycode, t_game *game);
 int		end_of_game(t_game *game);
-void 	print_tab(char **tab);
-
+void	print_tab(char **tab);
 
 //----------------graphic_Part----------------//
 void	aff_map(t_game *game);
@@ -80,13 +76,13 @@ void	display_collectible(t_game *game);
 int		texture(t_game *game);
 
 //----------------Mouv----------------//.
-int	right(t_game *game);
-int	left(t_game *game);
-int up(t_game *game);
-int down(t_game *game);
+int		right(t_game *game);
+int		left(t_game *game);
+int		up(t_game *game);
+int		down(t_game *game);
 
 //------------check_path--------//
-void 	ft_check_path(t_game *game, int x, int y);
+void	ft_check_path(t_game *game, int x, int y);
 void	ft_backtacking(t_game *game, int i, int j);
 void	ft_pos_player(t_game *game, int *x, int *y);
 void	ft_pos_exit(t_game *game, int *x, int *y);
@@ -99,11 +95,9 @@ int		ft_check_items(t_game *game);
 //--------------Error_Free--------------//
 int		ft_error(char *str);
 void	ft_error_path(t_game *game, char *str);
-void 	ft_free_map(t_game *game);
-void 	ft_free_path(t_game *game);
-void 	free_all(t_game *game);
-
-
+void	ft_free_map(t_game *game);
+void	ft_free_path(t_game *game);
+void	free_all(t_game *game);
 
 //------------Utils_libft---------//
 char	**ft_split(char *str, char c);

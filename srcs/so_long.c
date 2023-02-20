@@ -6,7 +6,7 @@
 /*   By: akdjebal <akdjebal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/05 23:01:13 by akram             #+#    #+#             */
-/*   Updated: 2023/02/20 14:38:17 by akdjebal         ###   ########.fr       */
+/*   Updated: 2023/02/20 14:41:29 by akdjebal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 int	end_of_game(t_game *game)
 {
 	printf("END OF THE GAME\n");
-	(void)game;
 	free_all(game);
 	exit(0);
 }
@@ -33,7 +32,6 @@ int	main(int ac, char **av)
 	check_arg(ac, av);
 	ultimate_parsing(fd, &game);
 	ft_check_path(&game, x, y);
-	printf("valeur de height == %d, valeur de width == %d", game.height, game.width);
 	window(&game);
 	close(fd);
 }
