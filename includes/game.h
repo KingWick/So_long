@@ -3,19 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   game.h                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: akdjebal <akdjebal@student.42.fr>          +#+  +:+       +#+        */
+/*   By: akram <akram@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/03 19:24:43 by akram             #+#    #+#             */
-/*   Updated: 2023/02/20 17:01:13 by akdjebal         ###   ########.fr       */
+/*   Updated: 2023/02/21 00:30:46 by akram            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef GAME_H
 # define GAME_H
 
-# include "../mlx/mlx.h"
-# include <X11/X.h>
-# include <X11/keysym.h>
+// # include "../mlx/mlx.h"
+// # include <X11/X.h>
+// # include <X11/keysym.h>
 # include <stdio.h>
 # include <stdlib.h>
 # include <unistd.h>
@@ -58,6 +58,8 @@ int		check_arg(int ac, char **av, t_game *game);
 int		valid_files(const char *s1, const char *s2);
 int		count_line(char **str);
 int		keys(int keycode, t_game *game);
+
+void 	line_break(char *str);
 int		end_of_game(t_game *game);
 void	print_tab(char **tab);
 

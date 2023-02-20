@@ -20,7 +20,7 @@ CC 			= clang
 CFLAGS		= -Wall -Wextra -Werror -g3 #-fsanitize=address -g3
 RM			= rm -f
 NAME		= so_long
-FLAGS		= -ldl -Imlx -Lmlx -lmlx -lm -lbsd -lXext -lX11
+FLAGS		= #-ldl -Imlx -Lmlx -lmlx -lm -lbsd -lXext -lX11
 
 all: 		${NAME}
 

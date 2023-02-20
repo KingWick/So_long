@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_error.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: akdjebal <akdjebal@student.42.fr>          +#+  +:+       +#+        */
+/*   By: akram <akram@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/03 19:25:10 by akram             #+#    #+#             */
-/*   Updated: 2023/02/20 17:00:24 by akdjebal         ###   ########.fr       */
+/*   Updated: 2023/02/20 21:37:12 by akram            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,15 +64,15 @@ void	ft_error_path(t_game *game, char *str)
 	exit (1);
 }
 
-void	free_all(t_game *game)
-{
-	ft_free_map(game);
-	mlx_destroy_image(game->mlx, game->p);
-	mlx_destroy_image(game->mlx, game->wall);
-	mlx_destroy_image(game->mlx, game->f);
-	mlx_destroy_image(game->mlx, game->c);
-	mlx_destroy_image(game->mlx, game->e);
-	mlx_destroy_window(game->mlx, game->win);
-	mlx_destroy_display(game->mlx);
-	free(game->mlx);
-}
+// void	free_all(t_game *game)
+// {
+// 	ft_free_map(game);
+// 	mlx_destroy_image(game->mlx, game->p);
+// 	mlx_destroy_image(game->mlx, game->wall);
+// 	mlx_destroy_image(game->mlx, game->f);
+// 	mlx_destroy_image(game->mlx, game->c);
+// 	mlx_destroy_image(game->mlx, game->e);
+// 	mlx_destroy_window(game->mlx, game->win);
+// 	mlx_destroy_display(game->mlx);
+// 	free(game->mlx);
+// }

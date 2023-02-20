@@ -3,14 +3,30 @@
 /*                                                        :::      ::::::::   */
 /*   parse_check.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: akdjebal <akdjebal@student.42.fr>          +#+  +:+       +#+        */
+/*   By: akram <akram@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/03 19:24:43 by akram             #+#    #+#             */
-/*   Updated: 2023/02/20 17:01:28 by akdjebal         ###   ########.fr       */
+/*   Updated: 2023/02/21 00:32:43 by akram            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/game.h"
+
+void line_break(char **str)
+{
+	int i;
+	i = 0;
+    while (str[i])
+    {
+        if (str[0] == '\n' || (str[i] == '\n' && str[i + 1] && str[i + 1] == '\n'))
+        {
+            ft_putstr("Error\nNique ta gross reums\n");
+            free(str);
+            exit(1);
+        }   
+        i++;
+    }
+}
 
 void	check_line_map(char **str,t_game *game)
 {
@@ -41,7 +57,6 @@ void	check_wall(char **str, t_game *game)
 	while (str[i])
 	{
 		x = 0;
-		//printf("str === %s\n", str[i]);
 		while (str[i][x])
 		{
 		
@@ -64,7 +79,6 @@ void	check_map(char **str, t_game *game)
 	i = 0;
 	while (str[i])
 	{
-		//printf("str === %s\n", str[i]);
 		x = 0;
 		while (str[i][x])
 		{
@@ -118,21 +132,12 @@ void	ultimate_parsing(int fd, t_game	*game)
 	while (get_next_line(fd, &line) == 1)
 	{		
 		map = ft_strcat(map, line);
-		printf("map == %s\n", map);
 		free(line);
 	}
 	map = ft_strcat(map, line);
 	free(line);
-	for (int i = 0; map[i]; i++)
-	{
-		if (map[i] == '\n' && map[i - 1] && map[i - 1] == '\n')
-		{
-			ft_putstr("Error\nNique ta gross reums\n");
-			free(map);
-			exit(1);
-		}	
-	}
 	game->map = ft_split(map, '\n');
+	line_break(map);
 	free(map);
 	check_line_map(game->map, game);
 	check_map(game->map, game);
