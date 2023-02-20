@@ -6,13 +6,13 @@
 /*   By: akram <akram@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/03 19:24:43 by akram             #+#    #+#             */
-/*   Updated: 2023/02/21 00:32:43 by akram            ###   ########.fr       */
+/*   Updated: 2023/02/21 00:37:05 by akram            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/game.h"
 
-void line_break(char **str)
+void line_break(char *str)
 {
 	int i;
 	i = 0;
