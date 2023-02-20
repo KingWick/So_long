@@ -6,7 +6,7 @@
 /*   By: akdjebal <akdjebal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/03 19:24:43 by akram             #+#    #+#             */
-/*   Updated: 2023/02/20 14:55:01 by akdjebal         ###   ########.fr       */
+/*   Updated: 2023/02/20 17:01:13 by akdjebal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,6 @@
 # include <stdlib.h>
 # include <unistd.h>
 # include <stdio.h>
-//# include <sys/types.h>
-//# include <sys/stat.h>
 # include <fcntl.h>
 
 # define UP		119
@@ -29,8 +27,6 @@
 # define LEFT	97
 # define DOWN	115
 # define ESCAPE 65307
-// # define WIN_WIDTH 1980
-// # define WIN_HEIGHT 1080
 # define BUFFER_SIZE 1
 
 typedef struct s_game
@@ -56,9 +52,9 @@ typedef struct s_game
 void	ultimate_parsing(int fd, t_game *game);
 void	check_element(char **str, t_game *game);
 void	init_game(t_game *game);
-void	check_line_map(char **str);
-void	check_wall(char **str);
-int		check_arg(int ac, char **av);
+void	check_line_map(char **str, t_game *game);
+void	check_wall(char **str, t_game *game);
+int		check_arg(int ac, char **av, t_game *game);
 int		valid_files(const char *s1, const char *s2);
 int		count_line(char **str);
 int		keys(int keycode, t_game *game);
@@ -93,7 +89,7 @@ int		ft_path(t_game *game, int i, int j);
 int		ft_check_items(t_game *game);
 
 //--------------Error_Free--------------//
-int		ft_error(char *str);
+int		ft_error(char *str, t_game *game);
 void	ft_error_path(t_game *game, char *str);
 void	ft_free_map(t_game *game);
 void	ft_free_path(t_game *game);
@@ -105,6 +101,7 @@ char	*ft_strcat(char *dest, char *src);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 char	*ft_strchr(const char *s, int c);
 char	*ft_strdup(const char *s);
+void	ft_putstr(char *str);
 int		get_next_line(int fd, char **line);
 int		ft_strlen(const char *s);
 

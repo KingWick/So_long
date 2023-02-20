@@ -6,7 +6,7 @@
 /*   By: akdjebal <akdjebal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/05 22:54:41 by akram             #+#    #+#             */
-/*   Updated: 2023/02/20 13:23:37 by akdjebal         ###   ########.fr       */
+/*   Updated: 2023/02/20 15:46:26 by akdjebal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,18 +38,18 @@ int	valid_files(const char *s1, const char *s2)
 	return (0);
 }
 
-int	check_arg(int ac, char **av)
+int	check_arg(int ac, char **av, t_game *game)
 {
 	int	fd;
 
 	if (ac != 2)
-		ft_error("invalid number of arguments\n");
+		ft_error("invalid number of arguments\n", game);
 	if (valid_files(av[1], ".ber") == 1)
-		ft_error("fake file extension\n");
+		ft_error("fake file extension\n", game);
 	fd = open(av[1], O_DIRECTORY);
 	if (fd > 0)
 	{
-		ft_error("Invalid files\n");
+		ft_error("Invalid files\n", game);
 		close(fd);
 	}
 	if (fd > 0)

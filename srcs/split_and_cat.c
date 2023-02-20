@@ -6,7 +6,7 @@
 /*   By: akdjebal <akdjebal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/03 19:24:43 by akram             #+#    #+#             */
-/*   Updated: 2023/02/09 15:15:57 by akdjebal         ###   ########.fr       */
+/*   Updated: 2023/02/20 16:41:23 by akdjebal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ char	*ft_strcat(char *dest, char *src)
 		i++;
 	}
 	j = 0;
-	tmp[i] = '|';
+	tmp[i] = '\n';
 	i++;
 	while (src[j] != '\0')
 	{

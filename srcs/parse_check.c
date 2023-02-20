@@ -6,13 +6,13 @@
 /*   By: akdjebal <akdjebal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/03 19:24:43 by akram             #+#    #+#             */
-/*   Updated: 2023/02/16 15:24:48 by akdjebal         ###   ########.fr       */
+/*   Updated: 2023/02/20 17:01:28 by akdjebal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/game.h"
 
-void	check_line_map(char **str)
+void	check_line_map(char **str,t_game *game)
 {
 	int	i;
 
@@ -20,12 +20,14 @@ void	check_line_map(char **str)
 	while (str[i])
 	{
 		if (ft_strlen(str[i]) != ft_strlen(str[0]))
-			ft_error("Error\nThe size of the map is not correct");
+		{
+			ft_error("Error\nThe size of the map is not correct\n", game);
+		}
 		i++;
 	}
 }
 
-void	check_wall(char **str)
+void	check_wall(char **str, t_game *game)
 {
 	int	x;
 	int	i;
@@ -39,19 +41,21 @@ void	check_wall(char **str)
 	while (str[i])
 	{
 		x = 0;
+		//printf("str === %s\n", str[i]);
 		while (str[i][x])
 		{
+		
 			if (str[count - 1][x] != '1')
-				ft_error("Error\nMap not closed on the bottom");
+				ft_error("Error\nMap not closed on the bottom\n", game);
 			if (str[i][0] != '1' || str[i][nb_char - 1] != '1')
-				ft_error("Error\nMap not surrounded by wall");
+				ft_error("Error\nMap not surrounded by wall\n", game);
 			x++;
 		}
 		i++;
 	}
 }
 
-void	check_map(char **str)
+void	check_map(char **str, t_game *game)
 {
 	int	x;
 	int	i;
@@ -60,21 +64,22 @@ void	check_map(char **str)
 	i = 0;
 	while (str[i])
 	{
+		//printf("str === %s\n", str[i]);
 		x = 0;
 		while (str[i][x])
 		{
 			if (str[0][x] != '1')
-				ft_error("Error\nMap not closed on the top");
+				ft_error("Error\nMap not closed on the top\n", game);
 			if (str[i][x] != '1' && str[i][x] != '0' && str[i][x] != 'P'
 				&& str[i][x] != 'E' && str[i][x] != 'C')
 			{
-				ft_error("Error\nUnknown character");
+				ft_error("Error\nUnknown character\n", game);
 			}
 			x++;
 		}
 		i++;
 	}
-	check_wall(str);
+	check_wall(str,game);
 }
 
 void	check_element(char **str, t_game *game)
@@ -101,25 +106,35 @@ void	check_element(char **str, t_game *game)
 		i++;
 	}
 	if (game->exit != 1 || game->player != 1 || game->collectible == 0)
-		ft_error("Error\nMissing elements or extra elements");
+		ft_error("Error\nMissing elements or extra elements\n", game);
 }
 
 void	ultimate_parsing(int fd, t_game	*game)
 {
 	char	*line;
 	char	*map;
-
+	
 	get_next_line(fd, &map);
 	while (get_next_line(fd, &line) == 1)
-	{
+	{		
 		map = ft_strcat(map, line);
+		printf("map == %s\n", map);
 		free(line);
 	}
 	map = ft_strcat(map, line);
 	free(line);
-	game->map = ft_split(map, '|');
+	for (int i = 0; map[i]; i++)
+	{
+		if (map[i] == '\n' && map[i - 1] && map[i - 1] == '\n')
+		{
+			ft_putstr("Error\nNique ta gross reums\n");
+			free(map);
+			exit(1);
+		}	
+	}
+	game->map = ft_split(map, '\n');
 	free(map);
-	check_line_map(game->map);
-	check_map(game->map);
+	check_line_map(game->map, game);
+	check_map(game->map, game);
 	check_element(game->map, game);
 }

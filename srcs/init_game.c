@@ -6,7 +6,7 @@
 /*   By: akdjebal <akdjebal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/03 19:24:59 by akram             #+#    #+#             */
-/*   Updated: 2023/02/20 14:06:44 by akdjebal         ###   ########.fr       */
+/*   Updated: 2023/02/20 15:34:40 by akdjebal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,10 +33,10 @@ void	window(t_game *game)
 {
 	game->mlx = mlx_init();
 	if (game->mlx == NULL)
-		ft_error("Error\nInitialization failed");
+		ft_error("Error\nInitialization failed\n", game);
 	game->win = mlx_new_window(game->mlx, game->width * 64, game->height * 64, "So long");
 	if (texture(game) == 1)
-		ft_error("Error\nloading textures\n");
+		ft_error("Error\nloading textures\n", game);
 	aff_map(game);
 	mlx_key_hook(game->win, keys, game);
 	mlx_loop(game->mlx);
@@ -80,7 +80,9 @@ int	keys(int keycode, t_game *game)
 {
 	if (keycode == ESCAPE)
 	{
-		ft_free_map(game);
+		//ft_free_map(game);
+		puts("ci");
+		free_all(game);
 		exit(1);
 	}
 	if (keycode == RIGHT)

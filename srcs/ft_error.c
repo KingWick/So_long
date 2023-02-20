@@ -6,17 +6,23 @@
 /*   By: akdjebal <akdjebal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/03 19:25:10 by akram             #+#    #+#             */
-/*   Updated: 2023/02/20 14:37:11 by akdjebal         ###   ########.fr       */
+/*   Updated: 2023/02/20 17:00:24 by akdjebal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/game.h"
 
-int	ft_error(char *str)
+int	ft_error(char *str, t_game *game)
 {
 	while (*str)
 		write (1, str++, 1);
+	ft_free_map(game);
 	exit (1);
+}
+
+void ft_putstr(char *str)
+{
+	write(1, str, ft_strlen(str));
 }
 
 void	ft_free_map(t_game *game)
@@ -24,6 +30,10 @@ void	ft_free_map(t_game *game)
 	int	i;
 
 	i = 0;
+	if (!game)
+		return ;
+	if (!game->map)
+		return ;
 	while (game->map[i])
 	{
 		free(game->map[i]);
@@ -63,4 +73,6 @@ void	free_all(t_game *game)
 	mlx_destroy_image(game->mlx, game->c);
 	mlx_destroy_image(game->mlx, game->e);
 	mlx_destroy_window(game->mlx, game->win);
+	mlx_destroy_display(game->mlx);
+	free(game->mlx);
 }
