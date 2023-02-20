@@ -6,7 +6,7 @@
 /*   By: akdjebal <akdjebal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/03 19:24:59 by akram             #+#    #+#             */
-/*   Updated: 2023/02/16 16:55:22 by akdjebal         ###   ########.fr       */
+/*   Updated: 2023/02/20 14:09:13 by akdjebal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,10 +32,10 @@ void	display_wall(t_game *game)
 void	display_floor(t_game *game)
 {
 	game->height = 0;
-	while(game->map[game->height])
+	while (game->map[game->height])
 	{
 		game->width = 0;
-		while(game->map[game->height][game->width])
+		while (game->map[game->height][game->width])
 		{
 			if (game->map[game->height][game->width] == '0')
 				mlx_put_image_to_window(game->mlx, game->win, game->f,
@@ -46,14 +46,13 @@ void	display_floor(t_game *game)
 	}
 }
 
-
 void	display_player(t_game *game)
 {
 	game->height = 0;
-	while(game->map[game->height])
+	while (game->map[game->height])
 	{
 		game->width = 0;
-		while(game->map[game->height][game->width])
+		while (game->map[game->height][game->width])
 		{
 			if (game->map[game->height][game->width] == 'P')
 				mlx_put_image_to_window(game->mlx, game->win, game->p,
@@ -64,14 +63,13 @@ void	display_player(t_game *game)
 	}
 }
 
-
 void	display_exit(t_game *game)
 {
 	game->height = 0;
-	while(game->map[game->height])
+	while (game->map[game->height])
 	{
 		game->width = 0;
-		while(game->map[game->height][game->width])
+		while (game->map[game->height][game->width])
 		{
 			if (game->map[game->height][game->width] == 'E')
 				mlx_put_image_to_window(game->mlx, game->win, game->e,
@@ -85,10 +83,10 @@ void	display_exit(t_game *game)
 void	display_collectible(t_game *game)
 {
 	game->height = 0;
-	while(game->map[game->height])
+	while (game->map[game->height])
 	{
 		game->width = 0;
-		while(game->map[game->height][game->width])
+		while (game->map[game->height][game->width])
 		{
 			if (game->map[game->height][game->width] == 'C')
 				mlx_put_image_to_window(game->mlx, game->win, game->c,

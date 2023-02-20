@@ -6,7 +6,7 @@
 /*   By: akdjebal <akdjebal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/03 19:24:59 by akram             #+#    #+#             */
-/*   Updated: 2023/02/19 19:43:16 by akdjebal         ###   ########.fr       */
+/*   Updated: 2023/02/20 14:06:44 by akdjebal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,27 +26,26 @@ void	init_game(t_game *game)
 	game->width = 0;
 	game->exit = 0;
 	game->collectible = 0;
-	game->nb_mouv = 0;
+	game->count = 0;
 }
 
-void window(t_game *game)
+void	window(t_game *game)
 {
-	game->mlx = mlx_init(); //initialisation de la bibli mlx renvoi Null si echoue 
+	game->mlx = mlx_init();
 	if (game->mlx == NULL)
-		ft_error("Error\nInitialization failed");//a cet endroit du code on a malloc game->map, game->path, mlx
+		ft_error("Error\nInitialization failed");
 	game->win = mlx_new_window(game->mlx, game->width * 64, game->height * 64, "So long");
 	if (texture(game) == 1)
 		ft_error("Error\nloading textures\n");
-	
 	aff_map(game);
 	mlx_key_hook(game->win, keys, game);
 	mlx_loop(game->mlx);
 }
 
-int texture(t_game *game)
+int	texture(t_game *game)
 {
-	int x;
-	int y;
+	int	x;
+	int	y;
 
 	x = 0;
 	y = 0;
@@ -77,7 +76,7 @@ void	aff_map(t_game *game)
 	display_exit(game);
 }
 
-int keys(int keycode, t_game *game)
+int	keys(int keycode, t_game *game)
 {
 	if (keycode == ESCAPE)
 	{

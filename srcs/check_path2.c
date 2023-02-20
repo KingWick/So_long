@@ -6,7 +6,7 @@
 /*   By: akdjebal <akdjebal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/03 19:24:43 by akram             #+#    #+#             */
-/*   Updated: 2023/02/13 13:35:36 by akdjebal         ###   ########.fr       */
+/*   Updated: 2023/02/20 13:14:38 by akdjebal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ void	ft_null_map(char *path, t_game *game)
 	path[i] = '\0';
 }
 
-void	ft_check_collect(t_game *game)
+void	ft_full_null(t_game *game)
 {
 	int	i;
 

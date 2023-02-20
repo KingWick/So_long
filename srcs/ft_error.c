@@ -6,7 +6,7 @@
 /*   By: akdjebal <akdjebal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/03 19:25:10 by akram             #+#    #+#             */
-/*   Updated: 2023/02/15 16:24:32 by akdjebal         ###   ########.fr       */
+/*   Updated: 2023/02/20 14:37:11 by akdjebal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,11 @@ int	ft_error(char *str)
 	exit (1);
 }
 
-void ft_free_map(t_game *game)
+void	ft_free_map(t_game *game)
 {
-	int i;
-	i = 0;
+	int	i;
 
+	i = 0;
 	while (game->map[i])
 	{
 		free(game->map[i]);
@@ -32,35 +32,35 @@ void ft_free_map(t_game *game)
 	free(game->map);
 }
 
-void ft_free_path(t_game *game)
+void	ft_free_path(t_game *game)
 {
-	int i;
-	i = 0;
+	int	i;
 
+	i = 0;
 	while (game->path[i])
 	{
-		free(game->path[i]);	//PROBLEME DE FREE LORSQUE LE CHEMIN NEST PAS VALIDE A REGLER  
+		free(game->path[i]);
 		i++;
 	}
 	free(game->path);
 }
 
-void	ft_error_path(t_game *game)
+void	ft_error_path(t_game *game, char *str)
 {
-	//ft_free_path(game);
-	//ft_free_map(game);
-	//free(game);
-	(void)game;
-	printf("invalid path\n");
-	exit (EXIT_FAILURE);
+	ft_free_path(game);
+	ft_free_map(game);
+	while (*str)
+		write (1, str++, 1);
+	exit (1);
 }
 
-void	ft_error_path_collect(t_game *game)
+void	free_all(t_game *game)
 {
-	//ft_free_path(game);
-	//ft_free_map(game);
-	//free(game);
-	(void)game;
-	printf("invalid path collect\n");
-	exit (EXIT_FAILURE);
+	ft_free_map(game);
+	mlx_destroy_image(game->mlx, game->p);
+	mlx_destroy_image(game->mlx, game->wall);
+	mlx_destroy_image(game->mlx, game->f);
+	mlx_destroy_image(game->mlx, game->c);
+	mlx_destroy_image(game->mlx, game->e);
+	mlx_destroy_window(game->mlx, game->win);
 }

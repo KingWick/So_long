@@ -6,108 +6,88 @@
 /*   By: akdjebal <akdjebal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/03 19:24:59 by akram             #+#    #+#             */
-/*   Updated: 2023/02/19 19:43:34 by akdjebal         ###   ########.fr       */
+/*   Updated: 2023/02/20 14:04:29 by akdjebal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/game.h"
 
-int up(t_game *game)
+int	up(t_game *game)
 {
-	int x; 
-	int y;
+	int	x;
+	int	y;
+
 	ft_pos_player(game, &x, &y);
-	if (game->map[x - 1][y] == '1' || 
+	if (game->map[x - 1][y] == '1' ||
 			(game->map[x - 1][y] == 'E' && game->collectible != 0))
 		return (0);
 	if (game->map[x - 1][y] == 'C')
 		game->collectible--;
-	game->map[x- 1][y] = 'P';
-	game->map[x][y] = '0';
-	game->nb_mouv++;
-	printf("COUNT === %d\n", game->nb_mouv);
-
 	if (game->map[x - 1][y] == 'E' && game->collectible == 0)
-	{
-		printf("END OF THE GAME");
-		// free_all(game);
-		exit(0);
-	}
-	//aff_map(game);
+		end_of_game(game);
+	game->map[x - 1][y] = 'P';
+	game->map[x][y] = '0';
+	game->count++;
+	printf("COUNT === %d\n", game->count);
 	return (0);
 }
 
 int	right(t_game *game)
 {
-	int x; 
-	int y;
-	
+	int	x;
+	int	y;
+
 	ft_pos_player(game, &x, &y);
-	if (game->map[x][y + 1] == '1' || 
+	if (game->map[x][y + 1] == '1' ||
 			(game->map[x][y + 1] == 'E' && game->collectible != 0))
 		return (0);
 	if (game->map[x][y + 1] == 'C')
 		game->collectible--;
-		
 	if (game->map[x][y + 1] == 'E' && game->collectible == 0)
-	{
-		printf("END OF THE GAME");
-		// free_all(game);
-		exit(0);
-	}
+		end_of_game(game);
 	game->map[x][y + 1] = 'P';
 	game->map[x][y] = '0';
-	game->nb_mouv++;
-	printf("COUNT === %d\n", game->nb_mouv);
-	//aff_map(game);
+	game->count++;
+	printf("COUNT === %d\n", game->count);
 	return (0);
 }
 
-int left(t_game *game)
+int	left(t_game *game)
 {
-	int x; 
-	int y;
+	int	x;
+	int	y;
+
 	ft_pos_player(game, &x, &y);
-	if (game->map[x][y - 1] == '1' || 
+	if (game->map[x][y - 1] == '1' ||
 			(game->map[x][y - 1] == 'E' && game->collectible != 0))
 		return (0);
 	if (game->map[x][y - 1] == 'C')
 		game->collectible--;
+	if (game->map[x][y - 1] == 'E' && game->collectible == 0)
+		end_of_game(game);
 	game->map[x][y - 1] = 'P';
 	game->map[x][y] = '0';
-	game->nb_mouv++;
-	printf("COUNT === %d\n", game->nb_mouv);
-
-	if (game->map[x][y - 1] == 'E' && game->collectible == 0)
-	{
-		printf("END OF THE GAME");
-		// free_all(game);
-		exit(0);
-	}
-	//aff_map(game);
+	game->count++;
+	printf("COUNT === %d\n", game->count);
 	return (0);
 }
 
-int down(t_game *game)
+int	down(t_game *game)
 {
-	int x; 
-	int y;
+	int	x;
+	int	y;
+
 	ft_pos_player(game, &x, &y);
-	if (game->map[x + 1][y] == '1' || 
+	if (game->map[x + 1][y] == '1' ||
 		(game->map[x + 1][y] == 'E' && game->collectible != 0))
 		return (0);
 	if (game->map[x + 1][y] == 'C')
 		game->collectible--;
+	if (game->map[x + 1][y] == 'E' && game->collectible == 0)
+		end_of_game(game);
 	game->map[x + 1][y] = 'P';
 	game->map[x][y] = '0';
-	game->nb_mouv++;
-	printf("COUNT === %d\n", game->nb_mouv);
-	if (game->map[x + 1][y] == 'E' && game->collectible == 0)
-	{
-		printf("END OF THE GAME");
-		// free_all(game);
-		exit(0);
-	}
-	//aff_map(game);
+	game->count++;
+	printf("COUNT === %d\n", game->count);
 	return (0);
 }

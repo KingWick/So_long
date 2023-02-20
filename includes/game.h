@@ -6,7 +6,7 @@
 /*   By: akdjebal <akdjebal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/03 19:24:43 by akram             #+#    #+#             */
-/*   Updated: 2023/02/19 17:49:28 by akdjebal         ###   ########.fr       */
+/*   Updated: 2023/02/20 14:26:28 by akdjebal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ typedef struct s_game
 	int		player;
 	int		exit;
 	int		collectible;
-	int		nb_mouv;
+	int		count;
 }				t_game;
 
 //------------init_game--and_check--------//
@@ -63,7 +63,11 @@ int		valid_files(const char *s1, const char *s2);
 int		count_line(char **str);
 int 	keys(int keycode, t_game *game);
 
+
+
+int		end_of_game(t_game *game);
 void 	print_tab(char **tab);
+
 
 //----------------graphic_Part----------------//
 void	aff_map(t_game *game);
@@ -86,18 +90,19 @@ void 	ft_check_path(t_game *game, int x, int y);
 void	ft_backtacking(t_game *game, int i, int j);
 void	ft_pos_player(t_game *game, int *x, int *y);
 void	ft_pos_exit(t_game *game, int *x, int *y);
-void	ft_check_collect(t_game *game);
+void	ft_full_null(t_game *game);
 void	ft_items(t_game *game);
 void	ft_null_map(char *path, t_game *game);
 int		ft_path(t_game *game, int i, int j);
 int		ft_check_items(t_game *game);
 
-//--------------Error--------------//
-void	ft_error_path_collect(t_game *game);
+//--------------Error_Free--------------//
 int		ft_error(char *str);
-void	ft_error_path(t_game *game);
+void	ft_error_path(t_game *game, char *str);
 void 	ft_free_map(t_game *game);
 void 	ft_free_path(t_game *game);
+void 	free_all(t_game *game);
+
 
 
 //------------Utils_libft---------//

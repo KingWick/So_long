@@ -6,7 +6,7 @@
 /*   By: akdjebal <akdjebal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/03 19:24:43 by akram             #+#    #+#             */
-/*   Updated: 2023/02/19 17:24:55 by akdjebal         ###   ########.fr       */
+/*   Updated: 2023/02/20 14:26:43 by akdjebal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	ft_pos_player(t_game *game, int *x, int *y)
 {
 	int		i;
-	int		j = 0;
+	int		j;
 	char	*line;
 
 	i = 0;
@@ -87,19 +87,23 @@ void	ft_backtacking(t_game *game, int i, int j)
 		ft_backtacking(game, i - 1, j);
 	}
 }
-void print_tab(char **tab)
+
+void	print_tab(char **tab)
 {
-	int i=0;
-	while(tab[i])
+	int	i;
+
+	i = 0;
+	while (tab[i])
 	{
-		printf("%s\n",tab[i]);
+		printf("%s\n", tab[i]);
 		i++;
 	}
 }
+
 int	ft_path(t_game *game, int i, int j)
 {
 	ft_pos_player(game, &i, &j);
-	ft_check_collect(game);
+	ft_full_null(game);
 	ft_backtacking(game, i, j);
 	ft_pos_exit(game, &i, &j);
 	game->path[i][j] = 'E';
@@ -113,16 +117,14 @@ int	ft_path(t_game *game, int i, int j)
 	return (0);
 }
 
-void ft_check_path(t_game *game, int x, int y)
+void	ft_check_path(t_game *game, int x, int y)
 {
 	game->height = count_line(game->map);
 	game->width = ft_strlen(game->map[0]);
-	
 	if (ft_path(game, x, y) == 0)
-		ft_error_path(game);
+		ft_error_path(game, "Error\nInvalid path");
 	ft_items(game);
 	if (ft_check_items(game) == 0)
-		ft_error_path_collect(game);
-	//ft_free_map(game);
+		ft_error_path(game, "Error\nInvalid path collect");
 	ft_free_path(game);
 }

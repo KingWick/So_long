@@ -6,26 +6,34 @@
 /*   By: akdjebal <akdjebal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/05 23:01:13 by akram             #+#    #+#             */
-/*   Updated: 2023/02/16 18:41:13 by akdjebal         ###   ########.fr       */
+/*   Updated: 2023/02/20 14:38:17 by akdjebal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/game.h"
 
+int	end_of_game(t_game *game)
+{
+	printf("END OF THE GAME\n");
+	(void)game;
+	free_all(game);
+	exit(0);
+}
+
 int	main(int ac, char **av)
 {
 	t_game	game;
 	int		fd;
-	int x;
-	int y;
+	int		x;
+	int		y;
+
 	x = 0;
 	y = 0;
-	
 	fd = open(av[1], O_RDONLY);
 	check_arg(ac, av);
 	ultimate_parsing(fd, &game);
-	ft_check_path(&game,x,y);
-	
+	ft_check_path(&game, x, y);
+	printf("valeur de height == %d, valeur de width == %d", game.height, game.width);
 	window(&game);
 	close(fd);
 }
