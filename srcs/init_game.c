@@ -6,7 +6,7 @@
 /*   By: akdjebal <akdjebal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/03 19:24:59 by akram             #+#    #+#             */
-/*   Updated: 2023/02/21 16:06:31 by akdjebal         ###   ########.fr       */
+/*   Updated: 2023/02/21 16:35:02 by akdjebal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 void	init_game(t_game *game)
 {
+	game->map = NULL;
 	game->win = NULL;
 	game->mlx = NULL;
 	game->wall = NULL;

@@ -6,7 +6,7 @@
 /*   By: akdjebal <akdjebal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/03 19:25:10 by akram             #+#    #+#             */
-/*   Updated: 2023/02/21 16:00:59 by akdjebal         ###   ########.fr       */
+/*   Updated: 2023/02/21 16:59:42 by akdjebal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int	ft_error(char *str, t_game *game)
 {
 	while (*str)
-		write (1, str++, 1);
+		write (STDERR_FILENO, str++, 1);
 	ft_free_map(game);
 	exit (1);
 }

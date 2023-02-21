@@ -6,11 +6,11 @@
 /*   By: akdjebal <akdjebal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/05 22:54:41 by akram             #+#    #+#             */
-/*   Updated: 2023/02/20 15:46:26 by akdjebal         ###   ########.fr       */
+/*   Updated: 2023/02/21 17:21:06 by akdjebal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/game.h"
+#include "game.h"
 
 int	count_line(char **str)
 {
@@ -49,10 +49,8 @@ int	check_arg(int ac, char **av, t_game *game)
 	fd = open(av[1], O_DIRECTORY);
 	if (fd > 0)
 	{
+		close(fd);
 		ft_error("Invalid files\n", game);
-		close(fd);
 	}
-	if (fd > 0)
-		close(fd);
 	return (0);
 }

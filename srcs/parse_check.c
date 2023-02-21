@@ -6,7 +6,7 @@
 /*   By: akdjebal <akdjebal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/03 19:24:43 by akram             #+#    #+#             */
-/*   Updated: 2023/02/21 15:16:03 by akdjebal         ###   ########.fr       */
+/*   Updated: 2023/02/21 16:53:09 by akdjebal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -105,7 +105,7 @@ void	check_element(t_game *game)
 
 	x = 0;
 	i = 0;
-	init_game(game);
+//	init_game(game);
 	while (game->map[i])
 	{
 		x = 0;

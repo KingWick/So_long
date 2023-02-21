@@ -6,7 +6,7 @@
 /*   By: akdjebal <akdjebal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/05 23:01:13 by akram             #+#    #+#             */
-/*   Updated: 2023/02/21 15:33:36 by akdjebal         ###   ########.fr       */
+/*   Updated: 2023/02/21 16:54:07 by akdjebal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,13 @@ int	main(int ac, char **av)
 
 	x = 0;
 	y = 0;
-	fd = open(av[1], O_RDONLY);
+	init_game(&game);
 	check_arg(ac, av, &game);
+	fd = open(av[1], O_RDONLY);
+	if (fd == -1)
+		ft_error(strerror(errno), &game);
 	ultimate_parsing(fd, &game);
 	ft_check_path(&game, x, y);
 	window(&game);
-	close(fd);
+//	close(fd);
 }

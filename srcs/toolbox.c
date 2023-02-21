@@ -6,7 +6,7 @@
 /*   By: akdjebal <akdjebal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/03 19:24:43 by akram             #+#    #+#             */
-/*   Updated: 2023/02/21 15:33:47 by akdjebal         ###   ########.fr       */
+/*   Updated: 2023/02/21 16:57:00 by akdjebal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,8 @@ void	ultimate_parsing(int fd, t_game	*game)
 	}
 	map = ft_strcat(map, line);
 	free(line);
+	if (close(fd) == -1)
+		(free(map), ft_error(strerror(errno), game));
 	line_break(map);
 	game->map = ft_split(map, '\n');
 	free(map);
