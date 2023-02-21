@@ -6,11 +6,34 @@
 /*   By: akram <akram@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/03 19:24:43 by akram             #+#    #+#             */
-/*   Updated: 2023/02/21 00:37:05 by akram            ###   ########.fr       */
+/*   Updated: 2023/02/21 01:54:25 by akram            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/game.h"
+
+// void line_break(t_game *game)
+// {
+//     int i;
+//     int x;
+
+//     x = 0;
+//     i = 0;
+// 	print_tab(game->map);
+//     while (game->map[i])
+//     {
+//         x = 0;
+//         while (game->map[i][x])
+//         {
+//             if (game->map[i][0] == '\n' || (game->map[i][0] == '\n' && game->map[i + 1] && game->map[i + 1][0] == '\n'))
+//             {
+//                 ft_error("icic", game);
+//             }
+//             x++;
+//         }
+//         i++;
+//     }
+// }
 
 void line_break(char *str)
 {
@@ -20,7 +43,7 @@ void line_break(char *str)
     {
         if (str[0] == '\n' || (str[i] == '\n' && str[i + 1] && str[i + 1] == '\n'))
         {
-            ft_putstr("Error\nNique ta gross reums\n");
+            ft_putstr("Error\nMap invalid\n");
             free(str);
             exit(1);
         }   
@@ -28,14 +51,14 @@ void line_break(char *str)
     }
 }
 
-void	check_line_map(char **str,t_game *game)
+void	check_line_map(t_game *game)
 {
 	int	i;
-
 	i = 0;
-	while (str[i])
+
+	while (game->map[i])
 	{
-		if (ft_strlen(str[i]) != ft_strlen(str[0]))
+		if (ft_strlen(game->map[i]) != ft_strlen(game->map[0]))
 		{
 			ft_error("Error\nThe size of the map is not correct\n", game);
 		}
@@ -43,7 +66,7 @@ void	check_line_map(char **str,t_game *game)
 	}
 }
 
-void	check_wall(char **str, t_game *game)
+void	check_wall(t_game *game)
 {
 	int	x;
 	int	i;
@@ -52,17 +75,17 @@ void	check_wall(char **str, t_game *game)
 
 	x = 0;
 	i = 0;
-	count = count_line(str);
-	nb_char = ft_strlen(str[0]);
-	while (str[i])
+	count = count_line(game->map);
+	nb_char = ft_strlen(game->map[0]);
+	while (game->map[i])
 	{
 		x = 0;
-		while (str[i][x])
+		while (game->map[i][x])
 		{
 		
-			if (str[count - 1][x] != '1')
+			if (game->map[count - 1][x] != '1')
 				ft_error("Error\nMap not closed on the bottom\n", game);
-			if (str[i][0] != '1' || str[i][nb_char - 1] != '1')
+			if (game->map[i][0] != '1' || game->map[i][nb_char - 1] != '1')
 				ft_error("Error\nMap not surrounded by wall\n", game);
 			x++;
 		}
@@ -70,22 +93,22 @@ void	check_wall(char **str, t_game *game)
 	}
 }
 
-void	check_map(char **str, t_game *game)
+void	check_map(t_game *game)
 {
 	int	x;
 	int	i;
 
 	x = 0;
 	i = 0;
-	while (str[i])
+	while (game->map[i])
 	{
 		x = 0;
-		while (str[i][x])
+		while (game->map[i][x])
 		{
-			if (str[0][x] != '1')
+			if (game->map[0][x] != '1')
 				ft_error("Error\nMap not closed on the top\n", game);
-			if (str[i][x] != '1' && str[i][x] != '0' && str[i][x] != 'P'
-				&& str[i][x] != 'E' && str[i][x] != 'C')
+			if (game->map[i][x] != '1' && game->map[i][x] != '0' && game->map[i][x] != 'P'
+				&& game->map[i][x] != 'E' && game->map[i][x] != 'C')
 			{
 				ft_error("Error\nUnknown character\n", game);
 			}
@@ -93,10 +116,10 @@ void	check_map(char **str, t_game *game)
 		}
 		i++;
 	}
-	check_wall(str,game);
+	check_wall(game);
 }
 
-void	check_element(char **str, t_game *game)
+void	check_element(t_game *game)
 {
 	int		i;
 	int		x;
@@ -104,16 +127,16 @@ void	check_element(char **str, t_game *game)
 	x = 0;
 	i = 0;
 	init_game(game);
-	while (str[i])
+	while (game->map[i])
 	{
 		x = 0;
-		while (str[i][x])
+		while (game->map[i][x])
 		{
-			if (str[i][x] == 'P')
+			if (game->map[i][x] == 'P')
 				game->player++;
-			else if (str[i][x] == 'E')
+			else if (game->map[i][x] == 'E')
 				game->exit++;
-			else if (str[i][x] == 'C')
+			else if (game->map[i][x] == 'C')
 				game->collectible++;
 			x++;
 		}
@@ -139,7 +162,7 @@ void	ultimate_parsing(int fd, t_game	*game)
 	game->map = ft_split(map, '\n');
 	line_break(map);
 	free(map);
-	check_line_map(game->map, game);
-	check_map(game->map, game);
-	check_element(game->map, game);
+	check_line_map(game);
+	check_map(game);
+	check_element(game);
 }

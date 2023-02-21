@@ -6,7 +6,7 @@
 /*   By: akram <akram@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/03 19:24:43 by akram             #+#    #+#             */
-/*   Updated: 2023/02/21 00:30:46 by akram            ###   ########.fr       */
+/*   Updated: 2023/02/21 01:47:08 by akram            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,15 +49,15 @@ typedef struct s_game
 }				t_game;
 
 //------------init_game--and_check--------//
-void	ultimate_parsing(int fd, t_game *game);
-void	check_element(char **str, t_game *game);
-void	init_game(t_game *game);
-void	check_line_map(char **str, t_game *game);
-void	check_wall(char **str, t_game *game);
-int		check_arg(int ac, char **av, t_game *game);
 int		valid_files(const char *s1, const char *s2);
+int		check_arg(int ac, char **av, t_game *game);
 int		count_line(char **str);
 int		keys(int keycode, t_game *game);
+void	ultimate_parsing(int fd, t_game *game);
+void	check_element(t_game *game);
+void	init_game(t_game *game);
+void	check_line_map(t_game *game);
+void	check_wall(t_game *game);
 
 void 	line_break(char *str);
 int		end_of_game(t_game *game);
