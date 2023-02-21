@@ -6,11 +6,11 @@
 /*   By: akdjebal <akdjebal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/03 19:24:43 by akram             #+#    #+#             */
-/*   Updated: 2023/02/20 13:14:38 by akdjebal         ###   ########.fr       */
+/*   Updated: 2023/02/21 19:12:12 by akdjebal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/game.h"
+#include "game.h"
 
 void	ft_null_map(char *path, t_game *game)
 {

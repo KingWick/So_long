@@ -6,11 +6,11 @@
 /*   By: akdjebal <akdjebal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/17 20:16:26 by akdjebal          #+#    #+#             */
-/*   Updated: 2023/02/20 16:45:56 by akdjebal         ###   ########.fr       */
+/*   Updated: 2023/02/21 19:12:12 by akdjebal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/game.h"
+#include "game.h"
 
 char	*ft_strjoin_free(char *s1, char *s2)
 {

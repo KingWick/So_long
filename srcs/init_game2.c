@@ -6,11 +6,11 @@
 /*   By: akdjebal <akdjebal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/03 19:24:59 by akram             #+#    #+#             */
-/*   Updated: 2023/02/21 14:56:08 by akdjebal         ###   ########.fr       */
+/*   Updated: 2023/02/21 19:12:12 by akdjebal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/game.h"
+#include "game.h"
 
 void	display_wall(t_game *game)
 {

@@ -6,11 +6,11 @@
 /*   By: akdjebal <akdjebal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/03 19:24:43 by akram             #+#    #+#             */
-/*   Updated: 2023/02/21 15:14:00 by akdjebal         ###   ########.fr       */
+/*   Updated: 2023/02/21 19:12:12 by akdjebal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/game.h"
+#include "game.h"
 
 void	ft_pos_player(t_game *game, int *x, int *y)
 {
@@ -88,8 +88,11 @@ void	ft_backtacking(t_game *game, int i, int j)
 	}
 }
 
-int	ft_path(t_game *game, int i, int j)
+int	ft_path(t_game *game)
 {
+	int i;
+	int j;
+	
 	ft_pos_player(game, &i, &j);
 	ft_full_null(game);
 	ft_backtacking(game, i, j);
@@ -101,11 +104,11 @@ int	ft_path(t_game *game, int i, int j)
 	return (0);
 }
 
-void	ft_check_path(t_game *game, int x, int y)
+void	ft_check_path(t_game *game)
 {
 	game->height = count_line(game->map);
 	game->width = ft_strlen(game->map[0]);
-	if (ft_path(game, x, y) == 0)
+	if (ft_path(game) == 0)
 		ft_error_path(game, "Error\nInvalid path");
 	ft_items(game);
 	if (ft_check_items(game) == 0)

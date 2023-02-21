@@ -6,11 +6,11 @@
 /*   By: akdjebal <akdjebal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/03 19:24:59 by akram             #+#    #+#             */
-/*   Updated: 2023/02/21 14:56:12 by akdjebal         ###   ########.fr       */
+/*   Updated: 2023/02/21 19:50:15 by akdjebal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/game.h"
+#include "game.h"
 
 int	up(t_game *game)
 {
@@ -28,7 +28,7 @@ int	up(t_game *game)
 	game->map[x - 1][y] = 'P';
 	game->map[x][y] = '0';
 	game->count++;
-	printf("COUNT === %d\n", game->count);
+	ft_printf("COUNT === %d\n", game->count);
 	return (0);
 }
 
@@ -48,7 +48,7 @@ int	right(t_game *game)
 	game->map[x][y + 1] = 'P';
 	game->map[x][y] = '0';
 	game->count++;
-	printf("COUNT === %d\n", game->count);
+	ft_printf("COUNT === %d\n", game->count);
 	return (0);
 }
 
@@ -68,7 +68,7 @@ int	left(t_game *game)
 	game->map[x][y - 1] = 'P';
 	game->map[x][y] = '0';
 	game->count++;
-	printf("COUNT === %d\n", game->count);
+	ft_printf("COUNT === %d\n", game->count);
 	return (0);
 }
 
@@ -88,6 +88,6 @@ int	down(t_game *game)
 	game->map[x + 1][y] = 'P';
 	game->map[x][y] = '0';
 	game->count++;
-	printf("COUNT === %d\n", game->count);
+	ft_printf("COUNT === %d\n", game->count);
 	return (0);
 }

@@ -6,11 +6,11 @@
 /*   By: akdjebal <akdjebal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/03 19:24:59 by akram             #+#    #+#             */
-/*   Updated: 2023/02/21 16:35:02 by akdjebal         ###   ########.fr       */
+/*   Updated: 2023/02/21 19:32:18 by akdjebal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/game.h"
+#include "game.h"
 
 void	init_game(t_game *game)
 {
@@ -41,7 +41,7 @@ void	window(t_game *game)
 		ft_error("Error\nloading textures\n", game);
 	aff_map(game);
 	mlx_key_hook(game->win, keys, game);
-	mlx_hook(game->win, 17, 1L << 2 , free_all, game);
+	mlx_hook(game->win, 17, 1L << 2, free_all, game);
 	mlx_loop(game->mlx);
 }
 

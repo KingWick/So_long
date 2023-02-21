@@ -6,11 +6,11 @@
 /*   By: akdjebal <akdjebal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/23 18:29:10 by akdjebal          #+#    #+#             */
-/*   Updated: 2023/02/06 14:26:21 by akdjebal         ###   ########.fr       */
+/*   Updated: 2023/02/21 19:12:12 by akdjebal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/game.h"
+#include "game.h"
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {

@@ -6,11 +6,11 @@
 /*   By: akdjebal <akdjebal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/03 19:25:10 by akram             #+#    #+#             */
-/*   Updated: 2023/02/21 16:59:42 by akdjebal         ###   ########.fr       */
+/*   Updated: 2023/02/21 19:12:12 by akdjebal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/game.h"
+#include "game.h"
 
 int	ft_error(char *str, t_game *game)
 {
@@ -71,5 +71,4 @@ int	free_all(t_game *game)
 	mlx_destroy_display(game->mlx);
 	free(game->mlx);
 	exit (1);
-	// return (0);
 }

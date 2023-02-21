@@ -6,11 +6,11 @@
 /*   By: akdjebal <akdjebal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/03 19:24:43 by akram             #+#    #+#             */
-/*   Updated: 2023/02/21 16:53:09 by akdjebal         ###   ########.fr       */
+/*   Updated: 2023/02/21 19:18:12 by akdjebal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/game.h"
+#include "game.h"
 
 void	line_break(char *str)
 {
@@ -38,9 +38,7 @@ void	check_line_map(t_game *game)
 	while (game->map[i])
 	{
 		if (ft_strlen(game->map[i]) != ft_strlen(game->map[0]))
-		{
 			ft_error("Error\nThe size of the map is not correct\n", game);
-		}
 		i++;
 	}
 }
@@ -105,7 +103,6 @@ void	check_element(t_game *game)
 
 	x = 0;
 	i = 0;
-//	init_game(game);
 	while (game->map[i])
 	{
 		x = 0;

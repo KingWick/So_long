@@ -1,5 +1,9 @@
 Script started on 2022-12-23 13:30:16+01:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="80" LINES="24"]
-[1m[7m%[27m[1m[0m                                                                                ]2;akdjebal@e3r10p2:~/so_long/mlx_linux/minilibx-linux]1;..inilibx-linux[0m[27m[24m[J[01;32m➜  [36mminilibx-linux[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K[?1h=[?2004hlls[?1l>[?2004l
+[1m[7m%[27m[1m[0m                                                                               
+ 
+]2;akdjebal@e3r10p2:~/so_long/mlx_linux/minilibx-linux]1;..inilibx-linux
+[0m[27m[24m[J[01;32m➜  [36mminilibx-linux[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K[?1h=[?2004hlls[?1l>[?2004l
+
 ]2;ls --color=tty]1;ls[0m[01;32mconfigure[0m              mlx_hook.c                    mlx_mouse_hook.c
 LICENSE                mlx_init.c                    mlx_new_image.c
 Makefile               mlx_int_anti_resize_win.c     mlx_new_window.c
@@ -15,7 +19,11 @@ mlx_flush_event.c      mlx_lib_xpm.c                 [01;32mREADME.md[0m
 mlx_get_color_value.c  mlx_loop.c                    [01;32mrgb2c.pl[0m
 mlx_get_data_addr.c    mlx_loop_hook.c               [01;34mtest[0m
 mlx.h                  mlx_mouse.c                   typescript
-[1m[7m%[27m[1m[0m                                                                                ]2;akdjebal@e3r10p2:~/so_long/mlx_linux/minilibx-linux]1;..inilibx-linux[0m[27m[24m[J[01;32m➜  [36mminilibx-linux[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K[?1h=[?2004hc cco
+[1m[7m%[27m[1m[0m                                                                               
+ 
+]2;akdjebal@e3r10p2:~/so_long/mlx_linux/minilibx-linux]1;..inilibx-linux
+[0m[27m[24m[J[01;32m➜  [36mminilibx-linux[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K[?1h=[?2004hc cco
+
 [0mcode                     compadd                  compprefuncs           
 codepage                 compare                  compquote              
 col                      compare-im6              compset                
@@ -41,7 +49,8 @@ combine                  composite                corepack
 [Jcomm                     [Jcomposite-im6            [Jcount-12               [J
 command                  [Jcomposite-im6.q16        [J                       
 commands                 [Jcomppostfuncs            [J                       
-[0m[27m[24m[J[01;32m➜  [36mminilibx-linux[00m [01;34mgit:([31mmaster[34m) [33m✗[00m co[Knfi
+[0m[27m[24m[J[01;32m➜  [36mminilibx-linux[00m [01;34mgit:([31mmaster[34m) [33m✗[00m co[Knfi
+
 [0mapt-config                          ncurses6-config                   
 _bsdconfig                          ncursesw5-config                  
 byobu-config                        ncursesw6-config                  
@@ -71,9 +80,14 @@ libsixel-config                     [Jx86_64-linux-gnu-python3-config   [J
 llvm-config-12                      [Jx86_64-pc-linux-gnu-pkg-config    [J
 lvmconfig                           [Jxml2-config                       [J
 ncurses5-config                     [J                                  
-[0m[27m[24m[J[01;32m➜  [36mminilibx-linux[00m [01;34mgit:([31mmaster[34m) [33m✗[00m confi[Kgure[9D[9C      [?1l>[?2004l
+[0m[27m[24m[J[01;32m➜  [36mminilibx-linux[00m [01;34mgit:([31mmaster[34m) [33m✗[00m confi[Kgure[9D[9C      [?1l>[?2004l
+
 ]2;configure]1;configurezsh: command not found: configure
-[1m[7m%[27m[1m[0m                                                                                ]2;akdjebal@e3r10p2:~/so_long/mlx_linux/minilibx-linux]1;..inilibx-linux[0m[27m[24m[J[01;31m➜  [36mminilibx-linux[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K[?1h=[?2004hssh s  ssh 
+[1m[7m%[27m[1m[0m                                                                               
+ 
+]2;akdjebal@e3r10p2:~/so_long/mlx_linux/minilibx-linux]1;..inilibx-linux
+[0m[27m[24m[J[01;31m➜  [36mminilibx-linux[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K[?1h=[?2004hssh s  ssh 
+
 [01;32mconfigure[0m*                    mlx_int_str_to_wordtab.c    
 LICENSE                       mlx_int_wait_first_expose.c 
 Makefile                      mlx_key_hook.c              
@@ -96,7 +110,9 @@ mlx_int_do_nothing.c          [01;32mREADME.md[0m*
 mlx_int_get_visual.c          [01;32mrgb2c.pl[0m*                   
 mlx_int.h                     [01;34mtest[0m/                       
 mlx_int_param_event.c         typescript                  
-[Jmlx_int_set_win_event_mask.c  [J                            [23A[0m[27m[24m[33Csh[K[1Cconfigure
+[Jmlx_int_set_win_event_mask.c  [J                            [23A[0m[27m[24m
+[33Csh[K[1Cconfigure
+
 [7mconfigure*                  [0m  mlx_int_str_to_wordtab.c    [K
 LICENSE                       mlx_int_wait_first_expose.c [K
 Makefile                      mlx_key_hook.c              [K
@@ -119,9 +135,16 @@ mlx_int_do_nothing.c          [01;32mREADME.md[0m*                  [K
 mlx_int_get_visual.c          [01;32mrgb2c.pl[0m*                   [K
 mlx_int.h                     [01;34mtest[0m/                       [K
 mlx_int_param_event.c         typescript                  [K
-[Jmlx_int_set_win_event_mask.c  [J                            [23A[0m[27m[24m[33Csh configure[K
-[7mconfigure*                  [0m  [7mconfigure*                  [0m  [A[0m[27m[24m[33Csh configure[K
-[J[A[45C[1m [0m[0m [?1l>[?2004l
+[Jmlx_int_set_win_event_mask.c  [J                            [23A[0m[27m[24m
+[33Csh configure[K
+
+[7mconfigure*                  [0m  
+[7mconfigure*                  [0m  
+[A[0m[27m[24m
+[33Csh configure[K
+
+[J[A[45C[1m [0m[0m [?1l>[?2004l
+
 [J]2;sh configure]1;sh[96m[1mconfigure[0m [[92minfo[0m] : Found X11 include path directory: /usr/include
 [96m[1mconfigure[0m [[92minfo[0m] : Generate "makefile.gen" from template "makefile.mk"
 [96m[1mconfigure[0m [[92minfo[0m] : Generate "test/makefile.gen" from template "test/makefile.mk"
@@ -168,28 +191,141 @@ cp libmlx.a libmlx_Linux.a
 [96m[1mconfigure[0m [[92minfo[0m] : Execute "make all" from file "test/makefile.gen"
 gcc -I/usr/include -O3 -I.. -g   -c -o main.o main.c
 gcc -o mlx-test main.o -L.. -lmlx -L/usr/include/../lib -lXext -lX11 -lm -lbsd
-[1m[7m%[27m[1m[0m                                                                                ]2;akdjebal@e3r10p2:~/so_long/mlx_linux/minilibx-linux]1;..inilibx-linux[0m[27m[24m[J[01;32m➜  [36mminilibx-linux[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K[?1h=[?2004h[0m[27m[24m[J[01;32m➜  [36mminilibx-linux[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [0m[27m[24m[J[01;32m➜  [36mminilibx-linux[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K[0m[27m[24m[J[01;32m➜  [36mminilibx-linux[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [0m[27m[24m[J[01;32m➜  [36mminilibx-linux[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K[0m[27m[24m[J[01;32m➜  [36mminilibx-linux[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [0m[27m[24m[J[01;32m➜  [36mminilibx-linux[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K[0m[27m[24m[J[01;32m➜  [36mminilibx-linux[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [0m[27m[24m[J[01;32m➜  [36mminilibx-linux[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [0m[27m[24m[J[01;32m➜  [36mminilibx-linux[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K[0m[27m[24m[J[01;32m➜  [36mminilibx-linux[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [0m[27m[24m[J[01;32m➜  [36mminilibx-linux[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [0m[27m[24m[J[01;32m➜  [36mminilibx-linux[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K[0m[27m[24m[J[01;32m➜  [36mminilibx-linux[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [0m[27m[24m[J[01;32m➜  [36mminilibx-linux[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [0m[27m[24m[J[01;32m➜  [36mminilibx-linux[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [0m[27m[24m[J[01;32m➜  [36mminilibx-linux[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [0m[27m[24m[J[01;32m➜  [36mminilibx-linux[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [0m[27m[24m[J[01;32m➜  [36mminilibx-linux[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [0m[27m[24m[J[01;32m➜  [36mminilibx-linux[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [0m[27m[24m[J[01;32m➜  [36mminilibx-linux[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [0m[27m[24m[J[01;32m➜  [36mminilibx-linux[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [0m[27m[24m[J[01;32m➜  [36mminilibx-linux[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [0m[27m[24m[J[01;32m➜  [36mminilibx-linux[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K[0m[27m[24m[J[01;32m➜  [36mminilibx-linux[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [0m[27m[24m[J[01;32m➜  [36mminilibx-linux[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [0m[27m[24m[J[01;32m➜  [36mminilibx-linux[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [0m[27m[24m[J[01;32m➜  [36mminilibx-linux[00m [01;34mgit:([31mmaster[34m) [33m✗[00m ccd[?1l>[?2004l
-]2;cd]1;cd[1m[7m%[27m[1m[0m                                                                                                     ]2;akdjebal@e3r10p2:~]1;~[0m[27m[24m[J[01;32m➜  [36m~[00m [K[?1h=[?2004hccd pu
-[J[01;34mPublic[0m/     [J[01;34mpush_swap[0m/[J[A[0m[27m[24m[5Ccd pu[KPublic[1m/[0m
-[J[7mPublic/   [0m  [J[01;34mpush_swap[0m/[J[A[0m[27m[24m[5Ccd Public[1m/[0m[K
-[7mPublic/   [0m  [7mPublic/   [0m  [A[0m[27m[24m[5Ccd Public[1m/[0m[Kpush_s[0mwap[1m/[0m
-[12C[7mpush_swap/[0m[01;34mPublic[0m/     [A[0m[27m[24m[5Ccd push_swap[1m/[0m[K
-[J[A[18C[0m [?1l>[?2004l
-[J]2;cd push_swap]1;cd[1m[7m%[27m[1m[0m                                                                                                     ]2;akdjebal@e3r10p2:~/push_swap]1;~/push_swap[0m[27m[24m[J[01;32m➜  [36mpush_swap[00m [01;34mgit:([31mmaster[34m)[00m [K[?1h=[?2004hccd 
-[J[01;34mincludes[0m/  [J[01;34msrcs[0m/    [J[A[0m[27m[24m[26Ccd[K[1Cincludes[1m/[0m
-[J[7mincludes/[0m  [J[01;34msrcs[0m/    [J[A[0m[27m[24m[26Ccd includes[1m/[0m[K
-[7mincludes/[0m  [7mincludes/[0m  [A[0m[27m[24m[26Ccd includes[1m/[0m[K[9Dsrcs[1m/[0m   [0m 
-[11C[7msrcs/    [0m[01;34mincludes[0m/  [A[0m[27m[24m[26Ccd srcs[1m/[0m[K
-[J[A[34C[0m [?1l>[?2004l
-[J]2;cd srcs]1;cd[1m[7m%[27m[1m[0m                                                                                                     ]2;akdjebal@e3r10p2:~/push_swap/srcs]1;..ush_swap/srcs[0m[27m[24m[J[01;32m➜  [36msrcs[00m [01;34mgit:([31mmaster[34m)[00m [K[?1h=[?2004hccat 
+[1m[7m%[27m[1m[0m                                                                               
+ 
+]2;akdjebal@e3r10p2:~/so_long/mlx_linux/minilibx-linux]1;..inilibx-linux
+[0m[27m[24m[J[01;32m➜  [36mminilibx-linux[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K[?1h=[?2004h
+
+[0m[27m[24m[J[01;32m➜  [36mminilibx-linux[00m [01;34mgit:([31mmaster[34m) [33m✗[00m 
+
+[0m[27m[24m[J[01;32m➜  [36mminilibx-linux[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K
+
+[0m[27m[24m[J[01;32m➜  [36mminilibx-linux[00m [01;34mgit:([31mmaster[34m) [33m✗[00m 
+
+#include "32m➜  [36mminilibx-linux[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K
+
+[0m[27m[24m[J[01;32m➜  [36mminilibx-linux[00m [01;34mgit:([31mmaster[34m) [33m✗[00m 
+
+[0m[27m[24m[J[01;32m➜  [36mminilibx-linux[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K
+
+[0m[27m[24m[J[01;32m➜  [36mminilibx-linux[00m [01;34mgit:([31mmaster[34m) [33m✗[00m 
+
+[0m[27m[24m[J[01;32m➜  [36mminilibx-linux[00m [01;34mgit:([31mmaster[34m) [33m✗[00m 
+
+[0m[27m[24m[J[01;32m➜  [36mminilibx-linux[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K
+
+[0m[27m[24m[J[01;32m➜  [36mminilibx-linux[00m [01;34mgit:([31mmaster[34m) [33m✗[00m 
+
+[0m[27m[24m[J[01;32m➜  [36mminilibx-linux[00m [01;34mgit:([31mmaster[34m) [33m✗[00m 
+
+[0m[27m[24m[J[01;32m➜  [36mminilibx-linux[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K
+
+[0m[27m[24m[J[01;32m➜  [36mminilibx-linux[00m [01;34mgit:([31mmaster[34m) [33m✗[00m 
+
+[0m[27m[24m[J[01;32m➜  [36mminilibx-linux[00m [01;34mgit:([31mmaster[34m) [33m✗[00m 
+
+[0m[27m[24m[J[01;32m➜  [36mminilibx-linux[00m [01;34mgit:([31mmaster[34m) [33m✗[00m 
+
+[0m[27m[24m[J[01;32m➜  [36mminilibx-linux[00m [01;34mgit:([31mmaster[34m) [33m✗[00m 
+
+[0m[27m[24m[J[01;32m➜  [36mminilibx-linux[00m [01;34mgit:([31mmaster[34m) [33m✗[00m 
+
+[0m[27m[24m[J[01;32m➜  [36mminilibx-linux[00m [01;34mgit:([31mmaster[34m) [33m✗[00m 
+
+[0m[27m[24m[J[01;32m➜  [36mminilibx-linux[00m [01;34mgit:([31mmaster[34m) [33m✗[00m 
+
+[0m[27m[24m[J[01;32m➜  [36mminilibx-linux[00m [01;34mgit:([31mmaster[34m) [33m✗[00m 
+
+[0m[27m[24m[J[01;32m➜  [36mminilibx-linux[00m [01;34mgit:([31mmaster[34m) [33m✗[00m 
+
+[0m[27m[24m[J[01;32m➜  [36mminilibx-linux[00m [01;34mgit:([31mmaster[34m) [33m✗[00m 
+
+[0m[27m[24m[J[01;32m➜  [36mminilibx-linux[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K
+
+[0m[27m[24m[J[01;32m➜  [36mminilibx-linux[00m [01;34mgit:([31mmaster[34m) [33m✗[00m 
+
+[0m[27m[24m[J[01;32m➜  [36mminilibx-linux[00m [01;34mgit:([31mmaster[34m) [33m✗[00m 
+
+[0m[27m[24m[J[01;32m➜  [36mminilibx-linux[00m [01;34mgit:([31mmaster[34m) [33m✗[00m 
+
+[0m[27m[24m[J[01;32m➜  [36mminilibx-linux[00m [01;34mgit:([31mmaster[34m) [33m✗[00m ccd[?1l>[?2004l
+
+]2;cd]1;cd[1m[7m%[27m[1m[0m                                                                                                    
+ 
+]2;akdjebal@e3r10p2:~]1;~
+[0m[27m[24m[J[01;32m➜  [36m~[00m [K[?1h=[?2004hccd pu
+
+[J[01;34mPublic[0m/     [J[01;34mpush_swap[0m/[J[A[0m[27m[24m
+[5Ccd pu[KPublic[1m/[0m
+
+[J[7mPublic/   [0m  [J[01;34mpush_swap[0m/[J[A[0m[27m[24m
+[5Ccd Public[1m/[0m[K
+
+[7mPublic/   [0m  
+[7mPublic/   [0m  
+[A[0m[27m[24m
+[5Ccd Public[1m/[0m[Kpush_s[0mwap[1m/[0m
+
+[12C[7mpush_swap/[0m
+[01;34mPublic[0m/     
+[A[0m[27m[24m
+[5Ccd push_swap[1m/[0m[K
+
+[J[A[18C[0m [?1l>[?2004l
+
+[J]2;cd push_swap]1;cd[1m[7m%[27m[1m[0m                                                                                                    
+ 
+]2;akdjebal@e3r10p2:~/push_swap]1;~/push_swap
+[0m[27m[24m[J[01;32m➜  [36mpush_swap[00m [01;34mgit:([31mmaster[34m)[00m [K[?1h=[?2004hccd 
+
+[J[01;34mincludes[0m/  [J[01;34msrcs[0m/    [J[A[0m[27m[24m
+[26Ccd[K[1Cincludes[1m/[0m
+
+[J[7mincludes/[0m  [J[01;34msrcs[0m/    [J[A[0m[27m[24m
+[26Ccd includes[1m/[0m[K
+
+[7mincludes/[0m  
+[7mincludes/[0m  
+[A[0m[27m[24m
+[26Ccd includes[1m/[0m[K[9Dsrcs[1m/[0m   [0m 
+
+[11C[7msrcs/    [0m
+[01;34mincludes[0m/  
+[A[0m[27m[24m
+[26Ccd srcs[1m/[0m[K
+
+[J[A[34C[0m [?1l>[?2004l
+
+[J]2;cd srcs]1;cd[1m[7m%[27m[1m[0m                                                                                                    
+ 
+]2;akdjebal@e3r10p2:~/push_swap/srcs]1;..ush_swap/srcs
+[0m[27m[24m[J[01;32m➜  [36msrcs[00m [01;34mgit:([31mmaster[34m)[00m [K[?1h=[?2004hccat 
+
 [0mmain.c         mouv3.c        pars.c         toolbox2.c     toolbox.c      trie_ultime.c
-[Jmouv2.c        [Jmouv.c         [Jpile.c         [Jtoolbox3.c     [Jtrie_stack.c   [J             [A[A[0m[27m[24m[21Ccat[K[1Cmain.c
+[Jmouv2.c        [Jmouv.c         [Jpile.c         [Jtoolbox3.c     [Jtrie_stack.c   [J             [A[A[0m[27m[24m
+[21Ccat[K[1Cmain.c
+
 [7mmain.c       [0m  mouv3.c        pars.c         toolbox2.c     toolbox.c      trie_ultime.c[K
-[Jmouv2.c        [Jmouv.c         [Jpile.c         [Jtoolbox3.c     [Jtrie_stack.c   [J             [A[A[0m[27m[24m[21Ccat main.c[K
-[7mmain.c       [0m  [7mmain.c       [0m  [A[0m[27m[24m[21Ccat main.c[Kouv2.c
-[0mmain.c         [1B[7mmouv2.c      [0m  [A[A[0m[27m[24m[21Ccat mouv2.c[K3[2C
-[15C[7mmouv3.c      [0m  [1Bmouv2.c        [A[A[0m[27m[24m[21Ccat mouv3.c[K
-[J[A[32C[1m [0m[0m [?1l>[?2004l
+[Jmouv2.c        [Jmouv.c         [Jpile.c         [Jtoolbox3.c     [Jtrie_stack.c   [J             [A[A[0m[27m[24m
+[21Ccat main.c[K
+
+[7mmain.c       [0m  
+[7mmain.c       [0m  
+[A[0m[27m[24m
+[21Ccat main.c[Kouv2.c
+
+[0mmain.c         
+[1B[7mmouv2.c      [0m  
+[A[A[0m[27m[24m
+[21Ccat mouv2.c[K3[2C
+
+[15C[7mmouv3.c      [0m  
+[1Bmouv2.c        
+[A[A[0m[27m[24m
+[21Ccat mouv3.c[K
+
+[J[A[32C[1m [0m[0m [?1l>[?2004l
+
 [J]2;cat mouv3.c]1;cat/* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
@@ -221,50 +357,183 @@ void	reverse_rotate_a_b(t_list *stack_a, t_list *stack_b)
 	reverse_rotate_a(stack_a);
 	reverse_rotate_b(stack_b);
 }
-[1m[7m%[27m[1m[0m                                                                                                     ]2;akdjebal@e3r10p2:~/push_swap/srcs]1;..ush_swap/srcs[0m[27m[24m[J[01;32m➜  [36msrcs[00m [01;34mgit:([31mmaster[34m)[00m [K[?1h=[?2004hccd [?1l>[?2004l
-]2;cd]1;cd[1m[7m%[27m[1m[0m                                                                                                     ]2;akdjebal@e3r10p2:~]1;~[0m[27m[24m[J[01;32m➜  [36m~[00m [K[?1h=[?2004hccd 
+[1m[7m%[27m[1m[0m                                                                                                    
+ 
+]2;akdjebal@e3r10p2:~/push_swap/srcs]1;..ush_swap/srcs
+[0m[27m[24m[J[01;32m➜  [36msrcs[00m [01;34mgit:([31mmaster[34m)[00m [K[?1h=[?2004hccd [?1l>[?2004l
+
+]2;cd]1;cd[1m[7m%[27m[1m[0m                                                                                                    
+ 
+]2;akdjebal@e3r10p2:~]1;~
+[0m[27m[24m[J[01;32m➜  [36m~[00m [K[?1h=[?2004hccd 
+
 [01;34m42-EXAM[0m/    [01;34mDocuments[0m/  [01;34mexam02[0m/     [01;36mgoinfre[0m@    [01;34mMusic[0m/      [01;34mPublic[0m/     [01;36msgoinfre[0m@   [01;34mTemplates[0m/
-[J[01;34mDesktop[0m/    [J[01;34mDownloads[0m/  [J[01;34mft_printf[0m/  [J[01;34mlibft-git[0m/  [J[01;34mPictures[0m/   [J[01;34mpush_swap[0m/  [J[01;34mso_long[0m/    [J[01;34mVideos[0m/   [J[A[A[0m[27m[24m[5Ccd[K[1C42-EXAM[1m/[0m
+[J[01;34mDesktop[0m/    [J[01;34mDownloads[0m/  [J[01;34mft_printf[0m/  [J[01;34mlibft-git[0m/  [J[01;34mPictures[0m/   [J[01;34mpush_swap[0m/  [J[01;34mso_long[0m/    [J[01;34mVideos[0m/   [J[A[A[0m[27m[24m
+[5Ccd[K[1C42-EXAM[1m/[0m
+
 [7m42-EXAM/  [0m  [01;34mDocuments[0m/  [01;34mexam02[0m/     [01;36mgoinfre[0m@    [01;34mMusic[0m/      [01;34mPublic[0m/     [01;36msgoinfre[0m@   [01;34mTemplates[0m/[K
-[J[01;34mDesktop[0m/    [J[01;34mDownloads[0m/  [J[01;34mft_printf[0m/  [J[01;34mlibft-git[0m/  [J[01;34mPictures[0m/   [J[01;34mpush_swap[0m/  [J[01;34mso_long[0m/    [J[01;34mVideos[0m/   [J[A[A[0m[27m[24m[5Ccd 42-EXAM[1m/[0m[K
-[7m42-EXAM/  [0m  [7m42-EXAM/  [0m  [A[0m[27m[24m[5Ccd 42-EXAM[1m/[0m[K[8DDesktop[1C
-[01;34m42-EXAM[0m/    [1B[7mDesktop/  [0m  [A[A[0m[27m[24m[5Ccd Desktop[1m/[0m[Kocumen[0mts[1m/[0m
-[12C[7mDocuments/[0m  [1B[01;34mDesktop[0m/    [A[A[0m[27m[24m[5Ccd Documents[1m/[0m[K[9Desktop[1m/[0m [0m 
-[12C[01;34mDocuments[0m/  [1B[7mDesktop/  [0m  [A[A[0m[27m[24m[5Ccd Desktop[1m/[0m[Kownloa[0mds[1m/[0m
-[1B[12C[7mDownloads/[0m  [01;34mDesktop[0m/    [A[A[0m[27m[24m[5Ccd Downloads[1m/[0m[K[10Dft_printf[1C
-[1B[24C[7mft_printf/[0m  [12C[01;34mDownloads[0m/  [A[A[0m[27m[24m[5Ccd ft_printf[1m/[0m[K[10Dlibft-git[1C
-[1B[36C[7mlibft-git/[0m  [24C[01;34mft_printf[0m/  [A[A[0m[27m[24m[5Ccd libft-git[1m/[0m[K[10DPictures[1m/[0m[0m 
-[1B[48C[7mPictures/ [0m  [36C[01;34mlibft-git[0m/  [A[A[0m[27m[24m[5Ccd Pictures[1m/[0m[K[9Dpush_swa[0mp[1m/[0m
-[1B[60C[7mpush_swap/[0m  [48C[01;34mPictures[0m/   [A[A[0m[27m[24m[5Ccd push_swap[1m/[0m[K[10Dso_long[1m/[0m [0m 
-[1B[72C[7mso_long/  [0m  [60C[01;34mpush_swap[0m/  [A[A[0m[27m[24m[5Ccd so_long[1m/[0m[K
-[J[A[16C[0m [?1l>[?2004l
-[J]2;cd so_long]1;cd[1m[7m%[27m[1m[0m                                                                                                     ]2;akdjebal@e3r10p2:~/so_long]1;~/so_long[0m[27m[24m[J[01;32m➜  [36mso_long[00m [K[?1h=[?2004hccd mlx_linux[1m/[0m[0m [?1l>[?2004l
-]2;cd mlx_linux]1;cd[1m[7m%[27m[1m[0m                                                                                                     ]2;akdjebal@e3r10p2:~/so_long/mlx_linux]1;..ong/mlx_linux[0m[27m[24m[J[01;32m➜  [36mmlx_linux[00m [K[?1h=[?2004hlls[?1l>[?2004l
+[J[01;34mDesktop[0m/    [J[01;34mDownloads[0m/  [J[01;34mft_printf[0m/  [J[01;34mlibft-git[0m/  [J[01;34mPictures[0m/   [J[01;34mpush_swap[0m/  [J[01;34mso_long[0m/    [J[01;34mVideos[0m/   [J[A[A[0m[27m[24m
+[5Ccd 42-EXAM[1m/[0m[K
+
+[7m42-EXAM/  [0m  
+[7m42-EXAM/  [0m  
+[A[0m[27m[24m
+[5Ccd 42-EXAM[1m/[0m[K[8DDesktop[1C
+
+[01;34m42-EXAM[0m/    
+[1B[7mDesktop/  [0m  
+[A[A[0m[27m[24m
+[5Ccd Desktop[1m/[0m[Kocumen[0mts[1m/[0m
+
+[12C[7mDocuments/[0m  
+[1B[01;34mDesktop[0m/    
+[A[A[0m[27m[24m
+[5Ccd Documents[1m/[0m[K[9Desktop[1m/[0m [0m 
+
+[12C[01;34mDocuments[0m/  
+[1B[7mDesktop/  [0m  
+[A[A[0m[27m[24m
+[5Ccd Desktop[1m/[0m[Kownloa[0mds[1m/[0m
+
+[1B[12C[7mDownloads/[0m  
+[01;34mDesktop[0m/    
+[A[A[0m[27m[24m
+[5Ccd Downloads[1m/[0m[K[10Dft_printf[1C
+
+[1B[24C[7mft_printf/[0m  
+[12C[01;34mDownloads[0m/  
+[A[A[0m[27m[24m
+[5Ccd ft_printf[1m/[0m[K[10Dlibft-git[1C
+
+[1B[36C[7mlibft-git/[0m  
+[24C[01;34mft_printf[0m/  
+[A[A[0m[27m[24m
+[5Ccd libft-git[1m/[0m[K[10DPictures[1m/[0m[0m 
+
+[1B[48C[7mPictures/ [0m  
+[36C[01;34mlibft-git[0m/  
+[A[A[0m[27m[24m
+[5Ccd Pictures[1m/[0m[K[9Dpush_swa[0mp[1m/[0m
+
+[1B[60C[7mpush_swap/[0m  
+[48C[01;34mPictures[0m/   
+[A[A[0m[27m[24m
+[5Ccd push_swap[1m/[0m[K[10Dso_long[1m/[0m [0m 
+
+[1B[72C[7mso_long/  [0m  
+[60C[01;34mpush_swap[0m/  
+[A[A[0m[27m[24m
+[5Ccd so_long[1m/[0m[K
+
+[J[A[16C[0m [?1l>[?2004l
+
+[J]2;cd so_long]1;cd[1m[7m%[27m[1m[0m                                                                                                    
+ 
+]2;akdjebal@e3r10p2:~/so_long]1;~/so_long
+[0m[27m[24m[J[01;32m➜  [36mso_long[00m [K[?1h=[?2004hccd mlx_linux[1m/[0m[0m [?1l>[?2004l
+
+]2;cd mlx_linux]1;cd[1m[7m%[27m[1m[0m                                                                                                    
+ 
+]2;akdjebal@e3r10p2:~/so_long/mlx_linux]1;..ong/mlx_linux
+[0m[27m[24m[J[01;32m➜  [36mmlx_linux[00m [K[?1h=[?2004hlls[?1l>[?2004l
+
 ]2;ls --color=tty]1;ls[0m[01;34mminilibx-linux[0m
-[1m[7m%[27m[1m[0m                                                                                                     ]2;akdjebal@e3r10p2:~/so_long/mlx_linux]1;..ong/mlx_linux[0m[27m[24m[J[01;32m➜  [36mmlx_linux[00m [K[?1h=[?2004hmmv minilibx-linux[1m/[0m[0m ../
-[J[01;34mmlx_linux[0m/  [Jtest.c    [J[A[0m[27m[24m[13Cmv minilibx-linux ../[K[?1l>[?2004l
-[J]2;mv minilibx-linux ../]1;mv[1m[7m%[27m[1m[0m                                                                                                     ]2;akdjebal@e3r10p2:~/so_long/mlx_linux]1;..ong/mlx_linux[0m[27m[24m[J[01;32m➜  [36mmlx_linux[00m [K[?1h=[?2004hlls[?1l>[?2004l
-]2;ls --color=tty]1;ls[1m[7m%[27m[1m[0m                                                                                                     ]2;akdjebal@e3r10p2:~/so_long/mlx_linux]1;..ong/mlx_linux[0m[27m[24m[J[01;32m➜  [36mmlx_linux[00m [K[?1h=[?2004hcccd c cd ..[?1l>[?2004l
-]2;cd ..]1;cd[1m[7m%[27m[1m[0m                                                                                                     ]2;akdjebal@e3r10p2:~/so_long]1;~/so_long[0m[27m[24m[J[01;32m➜  [36mso_long[00m [K[?1h=[?2004hlls[?1l>[?2004l
+[1m[7m%[27m[1m[0m                                                                                                    
+ 
+]2;akdjebal@e3r10p2:~/so_long/mlx_linux]1;..ong/mlx_linux
+[0m[27m[24m[J[01;32m➜  [36mmlx_linux[00m [K[?1h=[?2004hmmv minilibx-linux[1m/[0m[0m ../
+
+[J[01;34mmlx_linux[0m/  [Jtest.c    [J[A[0m[27m[24m
+[13Cmv minilibx-linux ../[K[?1l>[?2004l
+
+[J]2;mv minilibx-linux ../]1;mv[1m[7m%[27m[1m[0m                                                                                                    
+ 
+]2;akdjebal@e3r10p2:~/so_long/mlx_linux]1;..ong/mlx_linux
+[0m[27m[24m[J[01;32m➜  [36mmlx_linux[00m [K[?1h=[?2004hlls[?1l>[?2004l
+
+]2;ls --color=tty]1;ls[1m[7m%[27m[1m[0m                                                                                                    
+ 
+]2;akdjebal@e3r10p2:~/so_long/mlx_linux]1;..ong/mlx_linux
+[0m[27m[24m[J[01;32m➜  [36mmlx_linux[00m [K[?1h=[?2004hcccd c cd ..[?1l>[?2004l
+
+]2;cd ..]1;cd[1m[7m%[27m[1m[0m                                                                                                    
+ 
+]2;akdjebal@e3r10p2:~/so_long]1;~/so_long
+[0m[27m[24m[J[01;32m➜  [36mso_long[00m [K[?1h=[?2004hlls[?1l>[?2004l
+
 ]2;ls --color=tty]1;ls[0m[01;34mminilibx-linux[0m  [01;34mmlx_linux[0m  test.c
-[1m[7m%[27m[1m[0m                                                                                                     ]2;akdjebal@e3r10p2:~/so_long]1;~/so_long[0m[27m[24m[J[01;32m➜  [36mso_long[00m [K[?1h=[?2004hccd m
-[J[01;34mminilibx-linux[0m/  [J[01;34mmlx_linux[0m/     [J[A[0m[27m[24m[11Ccd m[Kinilibx-linux[1m/[0m
-[J[7mminilibx-linux/[0m  [J[01;34mmlx_linux[0m/     [J[A[0m[27m[24m[11Ccd minilibx-linux[1m/[0m[K
-[7mminilibx-linux/[0m  [7mminilibx-linux/[0m  [A[0m[27m[24m[11Ccd minilibx-linux[1m/[0m[K[14Dlx_[2Cnux[1m/[0m    [0m 
-[17C[7mmlx_linux/     [0m[01;34mminilibx-linux[0m/  [A[0m[27m[24m[11Ccd mlx_linux[1m/[0m[K
-[J[A[24C[0m [?1l>[?2004l
-[J]2;cd mlx_linux]1;cd[1m[7m%[27m[1m[0m                                                                                                     ]2;akdjebal@e3r10p2:~/so_long/mlx_linux]1;..ong/mlx_linux[0m[27m[24m[J[01;32m➜  [36mmlx_linux[00m [K[?1h=[?2004hlls[?1l>[?2004l
-]2;ls --color=tty]1;ls[1m[7m%[27m[1m[0m                                                                                                     ]2;akdjebal@e3r10p2:~/so_long/mlx_linux]1;..ong/mlx_linux[0m[27m[24m[J[01;32m➜  [36mmlx_linux[00m [K[?1h=[?2004hccd ..[?1l>[?2004l
-]2;cd ..]1;cd[1m[7m%[27m[1m[0m                                                                                                     ]2;akdjebal@e3r10p2:~/so_long]1;~/so_long[0m[27m[24m[J[01;32m➜  [36mso_long[00m [K[?1h=[?2004hrrm -rf 
-[J[01;34mminilibx-linux[0m/  [J[01;34mmlx_linux[0m/       [Jtest.c         [J[A[0m[27m[24m[11Crm -rf[K[1Cminilibx-linux[1m/[0m
-[J[7mminilibx-linux/[0m  [J[01;34mmlx_linux[0m/       [Jtest.c         [J[A[0m[27m[24m[11Crm -rf minilibx-linux[1m/[0m[K
-[7mminilibx-linux/[0m  [7mminilibx-linux/[0m  [A[0m[27m[24m[11Crm -rf minilibx-linux[1m/[0m[K[14Dlx_[2Cnux[1m/[0m    [0m 
-[17C[7mmlx_linux/     [0m  [01;34mminilibx-linux[0m/  [A[0m[27m[24m[11Crm -rf mlx_linux[1m/[0m[K
-[J[A[28C[0m [?1l>[?2004l
-[J]2;rm -rf mlx_linux]1;rm[1m[7m%[27m[1m[0m                                                                                                     ]2;akdjebal@e3r10p2:~/so_long]1;~/so_long[0m[27m[24m[J[01;32m➜  [36mso_long[00m [K[?1h=[?2004hlls[?1l>[?2004l
+[1m[7m%[27m[1m[0m                                                                                                    
+ 
+]2;akdjebal@e3r10p2:~/so_long]1;~/so_long
+[0m[27m[24m[J[01;32m➜  [36mso_long[00m [K[?1h=[?2004hccd m
+
+[J[01;34mminilibx-linux[0m/  [J[01;34mmlx_linux[0m/     [J[A[0m[27m[24m
+[11Ccd m[Kinilibx-linux[1m/[0m
+
+[J[7mminilibx-linux/[0m  [J[01;34mmlx_linux[0m/     [J[A[0m[27m[24m
+[11Ccd minilibx-linux[1m/[0m[K
+
+[7mminilibx-linux/[0m  
+[7mminilibx-linux/[0m  
+[A[0m[27m[24m
+[11Ccd minilibx-linux[1m/[0m[K[14Dlx_[2Cnux[1m/[0m    [0m 
+
+[17C[7mmlx_linux/     [0m
+[01;34mminilibx-linux[0m/  
+[A[0m[27m[24m
+[11Ccd mlx_linux[1m/[0m[K
+
+[J[A[24C[0m [?1l>[?2004l
+
+[J]2;cd mlx_linux]1;cd[1m[7m%[27m[1m[0m                                                                                                    
+ 
+]2;akdjebal@e3r10p2:~/so_long/mlx_linux]1;..ong/mlx_linux
+[0m[27m[24m[J[01;32m➜  [36mmlx_linux[00m [K[?1h=[?2004hlls[?1l>[?2004l
+
+]2;ls --color=tty]1;ls[1m[7m%[27m[1m[0m                                                                                                    
+ 
+]2;akdjebal@e3r10p2:~/so_long/mlx_linux]1;..ong/mlx_linux
+[0m[27m[24m[J[01;32m➜  [36mmlx_linux[00m [K[?1h=[?2004hccd ..[?1l>[?2004l
+
+]2;cd ..]1;cd[1m[7m%[27m[1m[0m                                                                                                    
+ 
+]2;akdjebal@e3r10p2:~/so_long]1;~/so_long
+[0m[27m[24m[J[01;32m➜  [36mso_long[00m [K[?1h=[?2004hrrm -rf 
+
+[J[01;34mminilibx-linux[0m/  [J[01;34mmlx_linux[0m/       [Jtest.c         [J[A[0m[27m[24m
+[11Crm -rf[K[1Cminilibx-linux[1m/[0m
+
+[J[7mminilibx-linux/[0m  [J[01;34mmlx_linux[0m/       [Jtest.c         [J[A[0m[27m[24m
+[11Crm -rf minilibx-linux[1m/[0m[K
+
+[7mminilibx-linux/[0m  
+[7mminilibx-linux/[0m  
+[A[0m[27m[24m
+[11Crm -rf minilibx-linux[1m/[0m[K[14Dlx_[2Cnux[1m/[0m    [0m 
+
+[17C[7mmlx_linux/     [0m  
+[01;34mminilibx-linux[0m/  
+[A[0m[27m[24m
+[11Crm -rf mlx_linux[1m/[0m[K
+
+[J[A[28C[0m [?1l>[?2004l
+
+[J]2;rm -rf mlx_linux]1;rm[1m[7m%[27m[1m[0m                                                                                                    
+ 
+]2;akdjebal@e3r10p2:~/so_long]1;~/so_long
+[0m[27m[24m[J[01;32m➜  [36mso_long[00m [K[?1h=[?2004hlls[?1l>[?2004l
+
 ]2;ls --color=tty]1;ls[0m[01;34mminilibx-linux[0m  test.c
-[1m[7m%[27m[1m[0m                                                                                                     ]2;akdjebal@e3r10p2:~/so_long]1;~/so_long[0m[27m[24m[J[01;32m➜  [36mso_long[00m [K[?1h=[?2004hccd minilibx-linux[1m/[0m[0m [?1l>[?2004l
-]2;cd minilibx-linux]1;cd[1m[7m%[27m[1m[0m                                                                                                     ]2;akdjebal@e3r10p2:~/so_long/minilibx-linux]1;..inilibx-linux[0m[27m[24m[J[01;32m➜  [36mminilibx-linux[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K[?1h=[?2004hlls[?1l>[?2004l
+[1m[7m%[27m[1m[0m                                                                                                    
+ 
+]2;akdjebal@e3r10p2:~/so_long]1;~/so_long
+[0m[27m[24m[J[01;32m➜  [36mso_long[00m [K[?1h=[?2004hccd minilibx-linux[1m/[0m[0m [?1l>[?2004l
+
+]2;cd minilibx-linux]1;cd[1m[7m%[27m[1m[0m                                                                                                    
+ 
+]2;akdjebal@e3r10p2:~/so_long/minilibx-linux]1;..inilibx-linux
+[0m[27m[24m[J[01;32m➜  [36mminilibx-linux[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K[?1h=[?2004hlls[?1l>[?2004l
+
 ]2;ls --color=tty]1;ls[0m[01;32mconfigure[0m              mlx_ext_randr.c               mlx_int_str_to_wordtab.c     mlx_screen_size.c
 libmlx.a               mlx_flush_event.c             mlx_int_wait_first_expose.c  mlx_set_font.c
 libmlx_Linux.a         mlx_get_color_value.c         mlx_key_hook.c               mlx_string_put.c
@@ -278,18 +547,35 @@ mlx_destroy_display.c  mlx_int_get_visual.c          mlx_new_window.c           
 mlx_destroy_image.c    mlx_int.h                     mlx_pixel_put.c
 mlx_destroy_window.c   mlx_int_param_event.c         mlx_put_image_to_window.c
 mlx_expose_hook.c      mlx_int_set_win_event_mask.c  mlx_rgb.c
-[1m[7m%[27m[1m[0m                                                                                                     ]2;akdjebal@e3r10p2:~/so_long/minilibx-linux]1;..inilibx-linux[0m[27m[24m[J[01;32m➜  [36mminilibx-linux[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K[?1h=[?2004hssh con
+[1m[7m%[27m[1m[0m                                                                                                    
+ 
+]2;akdjebal@e3r10p2:~/so_long/minilibx-linux]1;..inilibx-linux
+[0m[27m[24m[J[01;32m➜  [36mminilibx-linux[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K[?1h=[?2004hssh con
+
 [0mconch3                   conjure-im6.q16          containerd-shim-runc-v2  convert-im6.q16        
 [01;32mconfigure[0m*               containerd               continue                 convertquota           
 conjure                  containerd-shim          convert                                         
-[Jconjure-im6              [Jcontainerd-shim-runc-v1  [Jconvert-im6              [J                       [4A[0m[27m[24m[33Csh con[Kch3
+[Jconjure-im6              [Jcontainerd-shim-runc-v1  [Jconvert-im6              [J                       [4A[0m[27m[24m
+[33Csh con[Kch3
+
 [7mconch3                 [0m  conjure-im6.q16          containerd-shim-runc-v2  convert-im6.q16        [K
 [01;32mconfigure[0m*               containerd               continue                 convertquota           [K
 conjure                  containerd-shim          convert                                         [K
-[Jconjure-im6              [Jcontainerd-shim-runc-v1  [Jconvert-im6              [J                       [4A[0m[27m[24m[33Csh conch3[K
-[7mconch3                 [0m  [7mconch3                 [0m  [A[0m[27m[24m[33Csh conch3[Kfigure
-[0mconch3                   [1B[7mconfigure*             [0m  [A[A[0m[27m[24m[33Csh configure[K
-[J[A[45C[1m [0m[0m [?1l>[?2004l
+[Jconjure-im6              [Jcontainerd-shim-runc-v1  [Jconvert-im6              [J                       [4A[0m[27m[24m
+[33Csh conch3[K
+
+[7mconch3                 [0m  
+[7mconch3                 [0m  
+[A[0m[27m[24m
+[33Csh conch3[Kfigure
+
+[0mconch3                   
+[1B[7mconfigure*             [0m  
+[A[A[0m[27m[24m
+[33Csh configure[K
+
+[J[A[45C[1m [0m[0m [?1l>[?2004l
+
 [J]2;sh configure]1;sh[96m[1mconfigure[0m [[92minfo[0m] : Found X11 include path directory: /usr/include
 [96m[1mconfigure[0m [[92minfo[0m] : Generate "makefile.gen" from template "makefile.mk"
 [96m[1mconfigure[0m [[92minfo[0m] : Generate "test/makefile.gen" from template "test/makefile.mk"
@@ -297,21 +583,43 @@ conjure                  containerd-shim          convert                       
 make: Nothing to be done for 'all'.
 [96m[1mconfigure[0m [[92minfo[0m] : Execute "make all" from file "test/makefile.gen"
 make: Nothing to be done for 'all'.
-[1m[7m%[27m[1m[0m                                                                                                     ]2;akdjebal@e3r10p2:~/so_long/minilibx-linux]1;..inilibx-linux[0m[27m[24m[J[01;32m➜  [36mminilibx-linux[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K[?1h=[?2004hccd ..[?1l>[?2004l
-]2;cd ..]1;cd[1m[7m%[27m[1m[0m                                                                                                     ]2;akdjebal@e3r10p2:~/so_long]1;~/so_long[0m[27m[24m[J[01;32m➜  [36mso_long[00m [K[?1h=[?2004hccode   c  lls[?1l>[?2004l
+[1m[7m%[27m[1m[0m                                                                                                    
+ 
+]2;akdjebal@e3r10p2:~/so_long/minilibx-linux]1;..inilibx-linux
+[0m[27m[24m[J[01;32m➜  [36mminilibx-linux[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K[?1h=[?2004hccd ..[?1l>[?2004l
+
+]2;cd ..]1;cd[1m[7m%[27m[1m[0m                                                                                                    
+ 
+]2;akdjebal@e3r10p2:~/so_long]1;~/so_long
+[0m[27m[24m[J[01;32m➜  [36mso_long[00m [K[?1h=[?2004hccode   c  lls[?1l>[?2004l
+
 ]2;ls --color=tty]1;ls[0m[01;34mminilibx-linux[0m  test.c
-[1m[7m%[27m[1m[0m                                                                                                     ]2;akdjebal@e3r10p2:~/so_long]1;~/so_long[0m[27m[24m[J[01;32m➜  [36mso_long[00m [K[?1h=[?2004hccd [?1l>[?2004l
-]2;cd]1;cd[1m[7m%[27m[1m[0m                                                                                                     ]2;akdjebal@e3r10p2:~]1;~[0m[27m[24m[J[01;32m➜  [36m~[00m [K[?1h=[?2004h[7mbash -c "$(curl https://grademe.fr)"[27m[36D[27mb[27ma[27ms[27mh[27m [27m-[27mc[27m [27m"[27m$[27m([27mc[27mu[27mr[27ml[27m [27mh[27mt[27mt[27mp[27ms[27m:[27m/[27m/[27mg[27mr[27ma[27md[27me[27mm[27me[27m.[27mf[27mr[27m)[27m"[?1l>[?2004l
+[1m[7m%[27m[1m[0m                                                                                                    
+ 
+]2;akdjebal@e3r10p2:~/so_long]1;~/so_long
+[0m[27m[24m[J[01;32m➜  [36mso_long[00m [K[?1h=[?2004hccd [?1l>[?2004l
+
+]2;cd]1;cd[1m[7m%[27m[1m[0m                                                                                                    
+ 
+]2;akdjebal@e3r10p2:~]1;~
+[0m[27m[24m[J[01;32m➜  [36m~[00m [K[?1h=[?2004h[7mbash -c "$(curl https://grademe.fr)"[27m[36D[27mb[27ma[27ms[27mh[27m [27m-[27mc[27m [27m"[27m$[27m([27mc[27mu[27mr[27ml[27m [27mh[27mt[27mt[27mp[27ms[27m:[27m/[27m/[27mg[27mr[27ma[27md[27me[27mm[27me[27m.[27mf[27mr[27m)[27m"[?1l>[?2004l
+
 ]2;bash -c "$(curl https://grademe.fr)"]1;bash  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
                                  Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100 34885    0 34885    0     0  57824      0 --:--:-- --:--:-- --:--:-- 57852
+
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100 34885    0 34885    0     0  57824      0 --:--:-- --:--:-- --:--:-- 57852
 bash: line 1: !--: No such file or directory
   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
                                  Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100 10334  100 10334    0     0   280k      0 --:--:-- --:--:-- --:--:--  288k
+
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100 10334  100 10334    0     0   280k      0 --:--:-- --:--:-- --:--:--  288k
   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
                                  Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100 23594  100 23594    0     0   176k      0 --:--:-- --:--:-- --:--:--  177k
+
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100 23594  100 23594    0     0   176k      0 --:--:-- --:--:-- --:--:--  177k
 [H[2J[3J[H[2J[3J[H[2J[3J
 [1;32m ______     ______     ______     _____     ______     __    __     ______    
 /\  ___\   /\  == \   /\  __ \   /\  __-.  /\  ___\   /\ "-./  \   /\  ___\   
