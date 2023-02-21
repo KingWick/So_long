@@ -3,21 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   so_long.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: akram <akram@student.42.fr>                +#+  +:+       +#+        */
+/*   By: akdjebal <akdjebal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/05 23:01:13 by akram             #+#    #+#             */
-/*   Updated: 2023/02/20 21:37:40 by akram            ###   ########.fr       */
+/*   Updated: 2023/02/21 15:33:36 by akdjebal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/game.h"
-
-// int	end_of_game(t_game *game)
-// {
-// 	printf("END OF THE GAME\n");
-// 	free_all(game);
-// 	exit(0);
-// }
 
 int	main(int ac, char **av)
 {
@@ -32,6 +25,6 @@ int	main(int ac, char **av)
 	check_arg(ac, av, &game);
 	ultimate_parsing(fd, &game);
 	ft_check_path(&game, x, y);
-	//window(&game);
+	window(&game);
 	close(fd);
 }

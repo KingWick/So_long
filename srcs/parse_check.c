@@ -3,59 +3,38 @@
 /*                                                        :::      ::::::::   */
 /*   parse_check.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: akram <akram@student.42.fr>                +#+  +:+       +#+        */
+/*   By: akdjebal <akdjebal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/03 19:24:43 by akram             #+#    #+#             */
-/*   Updated: 2023/02/21 01:54:25 by akram            ###   ########.fr       */
+/*   Updated: 2023/02/21 15:16:03 by akdjebal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/game.h"
 
-// void line_break(t_game *game)
-// {
-//     int i;
-//     int x;
-
-//     x = 0;
-//     i = 0;
-// 	print_tab(game->map);
-//     while (game->map[i])
-//     {
-//         x = 0;
-//         while (game->map[i][x])
-//         {
-//             if (game->map[i][0] == '\n' || (game->map[i][0] == '\n' && game->map[i + 1] && game->map[i + 1][0] == '\n'))
-//             {
-//                 ft_error("icic", game);
-//             }
-//             x++;
-//         }
-//         i++;
-//     }
-// }
-
-void line_break(char *str)
+void	line_break(char *str)
 {
-	int i;
+	int	i;
+
 	i = 0;
-    while (str[i])
-    {
-        if (str[0] == '\n' || (str[i] == '\n' && str[i + 1] && str[i + 1] == '\n'))
-        {
-            ft_putstr("Error\nMap invalid\n");
-            free(str);
-            exit(1);
-        }   
-        i++;
-    }
+	while (str[i])
+	{
+		if (str[0] == '\n' || (str[i] == '\n'
+				&& str[i + 1] && str[i + 1] == '\n'))
+		{
+			write(1, "Error\nMap invalid\n", 18);
+			free(str);
+			exit(1);
+		}
+		i++;
+	}
 }
 
 void	check_line_map(t_game *game)
 {
 	int	i;
-	i = 0;
 
+	i = 0;
 	while (game->map[i])
 	{
 		if (ft_strlen(game->map[i]) != ft_strlen(game->map[0]))
@@ -81,8 +60,7 @@ void	check_wall(t_game *game)
 	{
 		x = 0;
 		while (game->map[i][x])
-		{
-		
+		{		
 			if (game->map[count - 1][x] != '1')
 				ft_error("Error\nMap not closed on the bottom\n", game);
 			if (game->map[i][0] != '1' || game->map[i][nb_char - 1] != '1')
@@ -107,7 +85,8 @@ void	check_map(t_game *game)
 		{
 			if (game->map[0][x] != '1')
 				ft_error("Error\nMap not closed on the top\n", game);
-			if (game->map[i][x] != '1' && game->map[i][x] != '0' && game->map[i][x] != 'P'
+			if (game->map[i][x] != '1' && game->map[i][x] != '0'
+					&& game->map[i][x] != 'P'
 				&& game->map[i][x] != 'E' && game->map[i][x] != 'C')
 			{
 				ft_error("Error\nUnknown character\n", game);
@@ -144,25 +123,4 @@ void	check_element(t_game *game)
 	}
 	if (game->exit != 1 || game->player != 1 || game->collectible == 0)
 		ft_error("Error\nMissing elements or extra elements\n", game);
-}
-
-void	ultimate_parsing(int fd, t_game	*game)
-{
-	char	*line;
-	char	*map;
-	
-	get_next_line(fd, &map);
-	while (get_next_line(fd, &line) == 1)
-	{		
-		map = ft_strcat(map, line);
-		free(line);
-	}
-	map = ft_strcat(map, line);
-	free(line);
-	game->map = ft_split(map, '\n');
-	line_break(map);
-	free(map);
-	check_line_map(game);
-	check_map(game);
-	check_element(game);
 }

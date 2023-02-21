@@ -6,6 +6,7 @@ SRCS		= 	srcs/so_long.c \
 				srcs/check_path2.c \
 				srcs/init_game.c \
 				srcs/init_game2.c \
+				srcs/toolbox.c \
 				srcs/move.c \
 				srcs/split_and_cat.c \
 			  	srcs/get_next_line.c \
@@ -20,7 +21,7 @@ CC 			= clang
 CFLAGS		= -Wall -Wextra -Werror
 RM			= rm -f
 NAME		= so_long
-FLAGS		= #-ldl -Imlx -Lmlx -lmlx -lm -lbsd -lXext -lX11
+FLAGS		= -ldl -Imlx -Lmlx -lmlx -lm -lbsd -lXext -lX11
 
 all: 		${NAME}
 

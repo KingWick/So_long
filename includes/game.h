@@ -3,19 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   game.h                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: akram <akram@student.42.fr>                +#+  +:+       +#+        */
+/*   By: akdjebal <akdjebal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/03 19:24:43 by akram             #+#    #+#             */
-/*   Updated: 2023/02/21 01:47:08 by akram            ###   ########.fr       */
+/*   Updated: 2023/02/21 15:52:00 by akdjebal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef GAME_H
 # define GAME_H
 
-// # include "../mlx/mlx.h"
-// # include <X11/X.h>
-// # include <X11/keysym.h>
+# include "../mlx/mlx.h"
+# include <X11/X.h>
+# include <X11/keysym.h>
 # include <stdio.h>
 # include <stdlib.h>
 # include <unistd.h>
@@ -53,15 +53,15 @@ int		valid_files(const char *s1, const char *s2);
 int		check_arg(int ac, char **av, t_game *game);
 int		count_line(char **str);
 int		keys(int keycode, t_game *game);
+int		end_of_game(t_game *game);
 void	ultimate_parsing(int fd, t_game *game);
 void	check_element(t_game *game);
 void	init_game(t_game *game);
 void	check_line_map(t_game *game);
 void	check_wall(t_game *game);
+void	check_map(t_game *game);
 
 void 	line_break(char *str);
-int		end_of_game(t_game *game);
-void	print_tab(char **tab);
 
 //----------------graphic_Part----------------//
 void	aff_map(t_game *game);
@@ -95,7 +95,7 @@ int		ft_error(char *str, t_game *game);
 void	ft_error_path(t_game *game, char *str);
 void	ft_free_map(t_game *game);
 void	ft_free_path(t_game *game);
-void	free_all(t_game *game);
+int	free_all(t_game *game);
 
 //------------Utils_libft---------//
 char	**ft_split(char *str, char c);
