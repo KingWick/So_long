@@ -6,7 +6,7 @@
 /*   By: akdjebal <akdjebal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/03 19:24:43 by akram             #+#    #+#             */
-/*   Updated: 2023/02/21 19:50:41 by akdjebal         ###   ########.fr       */
+/*   Updated: 2023/02/22 14:57:32 by akdjebal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,8 +63,7 @@ void	init_game(t_game *game);
 void	check_line_map(t_game *game);
 void	check_wall(t_game *game);
 void	check_map(t_game *game);
-
-void 	line_break(char *str);
+void	line_break(char *str);
 
 //----------------graphic_Part----------------//
 void	aff_map(t_game *game);
@@ -115,7 +114,5 @@ int		ft_putnbr_base_xx(unsigned int nbr, char c);
 int		ft_putnbr(int nb);
 int		ft_putnbr_u(unsigned int nb);
 int		ft_printf(const char *str, ...);
-
-
 
 #endif

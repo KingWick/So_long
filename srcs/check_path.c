@@ -6,7 +6,7 @@
 /*   By: akdjebal <akdjebal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/03 19:24:43 by akram             #+#    #+#             */
-/*   Updated: 2023/02/21 19:12:12 by akdjebal         ###   ########.fr       */
+/*   Updated: 2023/02/22 14:56:50 by akdjebal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,9 +90,9 @@ void	ft_backtacking(t_game *game, int i, int j)
 
 int	ft_path(t_game *game)
 {
-	int i;
-	int j;
-	
+	int	i;
+	int	j;
+
 	ft_pos_player(game, &i, &j);
 	ft_full_null(game);
 	ft_backtacking(game, i, j);
